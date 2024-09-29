@@ -44,7 +44,7 @@ define( 'CS_ELEMENT_BUCKET_LITE_WIDGET_PREFIX', 'eb-widget' );
  *
  * @return void
  */
-function load_CS_ELEMENT_BUCKET_LITE_plugin() {
+function load_cs_element_bucket_lite_plugin() {
 
 	require_once trailingslashit( CS_ELEMENT_BUCKET_LITE_PATH ) . 'vendor/autoload.php';
 	require_once trailingslashit( CS_ELEMENT_BUCKET_LITE_PATH ) . 'inc/helpers.php';
@@ -58,4 +58,4 @@ function load_CS_ELEMENT_BUCKET_LITE_plugin() {
 	}
 }
 
-add_action( 'plugins_loaded', 'load_CS_ELEMENT_BUCKET_LITE_plugin' );
+add_action( 'plugins_loaded', 'load_cs_element_bucket_lite_plugin' );

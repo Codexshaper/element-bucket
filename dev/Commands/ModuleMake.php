@@ -64,13 +64,13 @@ class ModuleMake extends Command {
 				\WP_CLI::success( "The module {$module}'s widgets directory has been created at $module_widgets_dir this location." );
 			}
 
-			$title            = ucwords( str_replace( '-', ' ', $module ) );
-			$class_name       = str_replace( ' ', '_', $title );
-			$module_name      = str_replace( ' ', '', $title );
-			$module_namespace = 'CodexShaper\ElementBucketLite\Modules\\' . $module_name;
-			$widget_namespace = 'CodexShaper\ElementBucketLite\Modules\\' . $module_name . '\Widgets';
-			$module_stub_name = 'module';
-			$widget_stub_name = 'widget';
+			$title                                = ucwords( str_replace( '-', ' ', $module ) );
+			$class_name                           = str_replace( ' ', '_', $title );
+			$module_name                          = str_replace( ' ', '', $title );
+			$module_namespace                     = 'CodexShaper\ElementBucketLite\Modules\\' . $module_name;
+			$widget_namespace                     = 'CodexShaper\ElementBucketLite\Modules\\' . $module_name . '\Widgets';
+			$module_stub_name                     = 'module';
+			$widget_stub_name                     = 'widget';
 			$cs_element_bucket_lite_module_prefix = defined( 'CS_ELEMENT_BUCKET_LITE_MODULE_PREFIX' ) ? CS_ELEMENT_BUCKET_LITE_MODULE_PREFIX . '-' : '';
 			$cs_element_bucket_lite_widget_prefix = defined( 'CS_ELEMENT_BUCKET_LITE_WIDGET_PREFIX' ) ? CS_ELEMENT_BUCKET_LITE_WIDGET_PREFIX . '-' : '';
 

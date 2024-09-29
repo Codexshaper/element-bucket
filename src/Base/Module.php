@@ -56,7 +56,7 @@ abstract class Module extends BaseModule {
 	 * @return string
 	 */
 	public function get_assets_base_url(): string {
-		return ELEMENT_BUCKET_LITE_URL;
+		return CS_ELEMENT_BUCKET_LITE_URL;
 	}
 
 	/**

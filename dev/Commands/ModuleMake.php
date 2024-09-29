@@ -54,9 +54,9 @@ class ModuleMake extends Command {
 		foreach ( $this->args as $arg ) {
 
 			$module             = strtolower( $arg );
-			$module_dir         = trailingslashit( ELEMENT_BUCKET_LITE_PATH ) . "modules/{$module}";
-			$module_widgets_dir = trailingslashit( ELEMENT_BUCKET_LITE_PATH ) . "modules/{$module}/widgets";
-			$widgets_css_dir    = trailingslashit( ELEMENT_BUCKET_LITE_PATH ) . 'assets/css';
+			$module_dir         = trailingslashit( CS_ELEMENT_BUCKET_LITE_PATH ) . "modules/{$module}";
+			$module_widgets_dir = trailingslashit( CS_ELEMENT_BUCKET_LITE_PATH ) . "modules/{$module}/widgets";
+			$widgets_css_dir    = trailingslashit( CS_ELEMENT_BUCKET_LITE_PATH ) . 'assets/css';
 
 			if ( ! is_dir( $module_widgets_dir ) ) {
 				wp_mkdir_p( $module_widgets_dir );
@@ -71,8 +71,8 @@ class ModuleMake extends Command {
 			$widget_namespace = 'CodexShaper\ElementBucketLite\Modules\\' . $module_name . '\Widgets';
 			$module_stub_name = 'module';
 			$widget_stub_name = 'widget';
-			$eb_module_prefix = defined( 'EB_MODULE_PREFIX' ) ? EB_MODULE_PREFIX . '-' : '';
-			$eb_widget_prefix = defined( 'EB_WIDGET_PREFIX' ) ? EB_WIDGET_PREFIX . '-' : '';
+			$cs_element_bucket_lite_module_prefix = defined( 'CS_ELEMENT_BUCKET_LITE_MODULE_PREFIX' ) ? CS_ELEMENT_BUCKET_LITE_MODULE_PREFIX . '-' : '';
+			$cs_element_bucket_lite_widget_prefix = defined( 'CS_ELEMENT_BUCKET_LITE_WIDGET_PREFIX' ) ? CS_ELEMENT_BUCKET_LITE_WIDGET_PREFIX . '-' : '';
 
 			if ( key_exists( 'skip-css', $this->assoc_args ) || key_exists( 'skip:css', $this->assoc_args ) ) {
 				$module_stub_name .= '-skip-css';
@@ -85,8 +85,8 @@ class ModuleMake extends Command {
 					'NAMESPACE'    => $module_namespace,
 					'CLASS'        => 'Module',
 					'WIDGET_CLASS' => $class_name,
-					'MODULE_NAME'  => $eb_module_prefix . $module,
-					'WIDGET_NAME'  => $eb_widget_prefix . $module,
+					'MODULE_NAME'  => $cs_element_bucket_lite_module_prefix . $module,
+					'WIDGET_NAME'  => $cs_element_bucket_lite_widget_prefix . $module,
 				)
 			) )->save_to( $module_dir, 'module.php' );
 
@@ -97,7 +97,7 @@ class ModuleMake extends Command {
 				array(
 					'NAMESPACE'   => $widget_namespace,
 					'CLASS'       => $class_name,
-					'WIDGET_NAME' => $eb_widget_prefix . $module,
+					'WIDGET_NAME' => $cs_element_bucket_lite_widget_prefix . $module,
 					'TITLE'       => $title,
 				)
 			) )->save_to( $module_widgets_dir, $module . '.php' );
@@ -109,12 +109,12 @@ class ModuleMake extends Command {
 					'css.stub',
 					array(
 						'CLASS'       => $class_name,
-						'WIDGET_NAME' => $eb_widget_prefix . $module,
+						'WIDGET_NAME' => $cs_element_bucket_lite_widget_prefix . $module,
 						'TITLE'       => $title,
 					)
-				) )->save_to( $widgets_css_dir, $eb_widget_prefix . $module . '.min.css' );
+				) )->save_to( $widgets_css_dir, $cs_element_bucket_lite_widget_prefix . $module . '.min.css' );
 
-				\WP_CLI::success( "The module {$module}'s css file has been created at {$widgets_css_dir}/{$eb_widget_prefix}{$module}.min.css this location." );
+				\WP_CLI::success( "The module {$module}'s css file has been created at {$widgets_css_dir}/{$cs_element_bucket_lite_widget_prefix}{$module}.min.css this location." );
 			}
 		}
 	}

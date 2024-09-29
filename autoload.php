@@ -105,7 +105,7 @@ class Autoload {
 				)
 			);
 
-			$file_path = ELEMENT_BUCKET_LITE_PATH . str_replace( $base_namespace_path . DIRECTORY_SEPARATOR, '', $file_namespace_path ) . '.php';
+			$file_path = CS_ELEMENT_BUCKET_LITE_PATH . str_replace( $base_namespace_path . DIRECTORY_SEPARATOR, '', $file_namespace_path ) . '.php';
 
 			if ( file_exists( $file_path ) && is_readable( $file_path ) ) {
 				include $file_path;

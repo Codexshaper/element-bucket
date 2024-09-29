@@ -67,7 +67,7 @@ class Module extends BaseModule {
 			'eb-widget-progress-bar',
 			$this->get_css_assets_url( 'eb-widget-progress-bar', null, true, true ),
 			array(),
-			ELEMENT_BUCKET_LITE_VERSION
+			CS_ELEMENT_BUCKET_LITE_VERSION
 		);
 	}
 }

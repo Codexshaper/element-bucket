@@ -67,7 +67,7 @@ class Module extends BaseModule {
 			'eb-widget-pricing-table',
 			$this->get_css_assets_url( 'eb-widget-pricing-table', null, true, true ),
 			array(),
-			ELEMENT_BUCKET_LITE_VERSION
+			CS_ELEMENT_BUCKET_LITE_VERSION
 		);
 	}
 }

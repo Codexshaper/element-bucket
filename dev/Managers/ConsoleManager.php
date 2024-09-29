@@ -84,7 +84,7 @@ class ConsoleManager {
 	 * @return void
 	 */
 	public function __construct() {
-		if ( ELEMENT_BUCKET_LITE_CLI === true && defined( 'WP_CLI' ) && WP_CLI ) {
+		if ( CS_ELEMENT_BUCKET_LITE_CLI === true && defined( 'WP_CLI' ) && WP_CLI ) {
 			$this->register_commands();
 		}
 	}

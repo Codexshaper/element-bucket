@@ -63,7 +63,7 @@ class Module extends BaseModule {
 			'eb-widget-section-title',
 			$this->get_css_assets_url( 'eb-widget-section-title', null, true, true ),
 			array(),
-			ELEMENT_BUCKET_LITE_VERSION
+			CS_ELEMENT_BUCKET_LITE_VERSION
 		);
 	}
 }

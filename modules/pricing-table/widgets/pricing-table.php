@@ -3,7 +3,7 @@
  * Pricing Table Widget file
  *
  * @category   Widget
- * @package    elementbucket-lite
+ * @package    cs-element-bucket-lite
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
  * @link       https://elementbucket.com
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Pricing Table widget class
  *
  * @category   Class
- * @package    elementbucket-lite
+ * @package    cs-element-bucket-lite
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
  * @link       https://elementbucket.com
@@ -50,7 +50,7 @@ class Pricing_Table extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Pricing Table', 'elementbucket-lite' );
+		return __( 'EB Pricing Table', 'cs-element-bucket-lite' );
 	}
 
 	/**
@@ -82,7 +82,7 @@ class Pricing_Table extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'elementbucket-lite' );
+		return array( 'cs-element-bucket-lite' );
 	}
 
 	/**
@@ -112,62 +112,62 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'general_settings',
 			array(
-				'label' => __( 'General Settings', 'elementbucket-lite' ),
+				'label' => __( 'General Settings', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'active_duration',
 			array(
-				'label'   => esc_html__( 'Active Duration', 'elementbucket-lite' ),
+				'label'   => esc_html__( 'Active Duration', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'solid',
 				'options' => array(
-					'yearly'  => esc_html__( 'Yearly', 'elementbucket-lite' ),
-					'monthly' => esc_html__( 'Monthly', 'elementbucket-lite' ),
+					'yearly'  => esc_html__( 'Yearly', 'cs-element-bucket-lite' ),
+					'monthly' => esc_html__( 'Monthly', 'cs-element-bucket-lite' ),
 				),
 			)
 		);
 		$this->add_control(
 			'plan_type',
 			array(
-				'label'       => __( 'Plan Type', 'elementbucket-lite' ),
+				'label'       => __( 'Plan Type', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => esc_html__( 'Regular Plan', 'elementbucket-lite' ),
+				'default'     => esc_html__( 'Regular Plan', 'cs-element-bucket-lite' ),
 				'label_block' => true,
 			)
 		);
 		$this->add_control(
 			'curency_sign',
 			array(
-				'label'       => __( 'Curency Sign', 'elementbucket-lite' ),
+				'label'       => __( 'Curency Sign', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => esc_html__( '$', 'elementbucket-lite' ),
+				'default'     => esc_html__( '$', 'cs-element-bucket-lite' ),
 				'label_block' => true,
 			)
 		);
 		$this->add_control(
 			'price',
 			array(
-				'label'       => esc_html__( 'Price', 'elementbucket-lite' ),
+				'label'       => esc_html__( 'Price', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::NUMBER,
-				'default'     => esc_html__( '09.96', 'elementbucket-lite' ),
+				'default'     => esc_html__( '09.96', 'cs-element-bucket-lite' ),
 				'label_block' => true,
 			)
 		);
 		$this->add_control(
 			'duration',
 			array(
-				'label'       => esc_html__( 'Duration', 'elementbucket-lite' ),
+				'label'       => esc_html__( 'Duration', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => esc_html__( 'Monthly', 'elementbucket-lite' ),
+				'default'     => esc_html__( 'Monthly', 'cs-element-bucket-lite' ),
 				'label_block' => true,
 			)
 		);
 		$this->add_control(
 			'btn_icon',
 			array(
-				'label'   => esc_html__( 'Button Icon', 'elementbucket-lite' ),
+				'label'   => esc_html__( 'Button Icon', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::ICONS,
 				'default' => array(),
 
@@ -176,7 +176,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'btn_icon_width',
 			array(
-				'label'      => esc_html__( 'Button Icon Width', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Button Icon Width', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -202,16 +202,16 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'btn_title',
 			array(
-				'label'   => __( 'Button Title', 'elementbucket-lite' ),
+				'label'   => __( 'Button Title', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'Choose this Package', 'elementbucket-lite' ),
+				'default' => esc_html__( 'Choose this Package', 'cs-element-bucket-lite' ),
 
 			)
 		);
 		$this->add_control(
 			'btn_link',
 			array(
-				'label'   => __( 'Button Link', 'elementbucket-lite' ),
+				'label'   => __( 'Button Link', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::URL,
 				'default' => array(
 					'url' => '#',
@@ -223,18 +223,18 @@ class Pricing_Table extends Widget {
 		$repeater_two->add_control(
 			'price_section_name',
 			array(
-				'label'       => __( 'Price Section Name', 'elementbucket-lite' ),
+				'label'       => __( 'Price Section Name', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => '',
 				'label_block' => true,
-				'placeholder' => __( 'Enter price section name ', 'elementbucket-lite' ),
+				'placeholder' => __( 'Enter price section name ', 'cs-element-bucket-lite' ),
 				'description' => ( 'Enter exactly same price section name where you want to add feature' ),
 			)
 		);
 		$repeater_two->add_control(
 			'feature_icon',
 			array(
-				'label'   => esc_html__( 'Icon', 'elementbucket-lite' ),
+				'label'   => esc_html__( 'Icon', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::ICONS,
 				'default' => array(),
 
@@ -243,7 +243,7 @@ class Pricing_Table extends Widget {
 		$repeater_two->add_control(
 			'feature_icon_width',
 			array(
-				'label'      => esc_html__( 'Icon Width', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Icon Width', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -268,15 +268,15 @@ class Pricing_Table extends Widget {
 		$repeater_two->add_control(
 			'title',
 			array(
-				'label'   => __( 'Title', 'elementbucket-lite' ),
+				'label'   => __( 'Title', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( '12 Hours Access', 'elementbucket-lite' ),
+				'default' => esc_html__( '12 Hours Access', 'cs-element-bucket-lite' ),
 			)
 		);
 		$this->add_control(
 			'features',
 			array(
-				'label'  => __( 'Features', 'elementbucket-lite' ),
+				'label'  => __( 'Features', 'cs-element-bucket-lite' ),
 				'type'   => Controls_Manager::REPEATER,
 				'fields' => $repeater_two->get_controls(),
 			)
@@ -286,14 +286,14 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'styling_pricing_card',
 			array(
-				'label' => __( 'Pricing Card Styling', 'elementbucket-lite' ),
+				'label' => __( 'Pricing Card Styling', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'pricing_card_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Card Margin', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Pricing Card Margin', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -308,7 +308,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricin_card_padding',
 			array(
-				'label'      => esc_html__( 'Pricing Card Padding', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Pricing Card Padding', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -330,7 +330,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'eb_border_width',
 			array(
-				'label'      => esc_html__( 'Border Width', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Border Width', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -355,7 +355,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'content_gap',
 			array(
-				'label'      => esc_html__( 'Content Gap', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Content Gap', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -381,7 +381,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_duration_active_color',
 			array(
-				'label'     => __( 'Active Duration Color', 'elementbucket-lite' ),
+				'label'     => __( 'Active Duration Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -393,7 +393,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_heading_color',
 			array(
-				'label'     => __( 'Pricing Heading Color', 'elementbucket-lite' ),
+				'label'     => __( 'Pricing Heading Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -406,14 +406,14 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_heading_typography',
-				'label'    => __( 'Pricing Heading Typography', 'elementbucket-lite' ),
+				'label'    => __( 'Pricing Heading Typography', 'cs-element-bucket-lite' ),
 				'selector' => '{{WRAPPER}} .single-pricing .pricing-plan-duration',
 			)
 		);
 		$this->add_control(
 			'pricing_heading_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Heading Margin', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Pricing Heading Margin', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -428,7 +428,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_title_color',
 			array(
-				'label'     => __( 'Pricing Title Color', 'elementbucket-lite' ),
+				'label'     => __( 'Pricing Title Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -441,14 +441,14 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_title_typography',
-				'label'    => __( 'Pricing Title Typography', 'elementbucket-lite' ),
+				'label'    => __( 'Pricing Title Typography', 'cs-element-bucket-lite' ),
 				'selector' => '{{WRAPPER}} .single-pricing .pricing-plan',
 			)
 		);
 		$this->add_control(
 			'pricing_title_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Title Margin', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Pricing Title Margin', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -465,14 +465,14 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'pricing_feature',
 			array(
-				'label' => __( 'Pricing Feature', 'elementbucket-lite' ),
+				'label' => __( 'Pricing Feature', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'pricing_feature_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Feature Margin', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Pricing Feature Margin', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -487,7 +487,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_features_color',
 			array(
-				'label'     => __( 'Pricing Features Color', 'elementbucket-lite' ),
+				'label'     => __( 'Pricing Features Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -500,7 +500,7 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_features_typography',
-				'label'    => __( 'Pricing Features Typography', 'elementbucket-lite' ),
+				'label'    => __( 'Pricing Features Typography', 'cs-element-bucket-lite' ),
 				'selector' => '{{WRAPPER}} .single-pricing .pricing-plan-item',
 			)
 		);
@@ -509,14 +509,14 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'pricing',
 			array(
-				'label' => __( 'Pricing', 'elementbucket-lite' ),
+				'label' => __( 'Pricing', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'pricing_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Margin', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Pricing Margin', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -531,7 +531,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_price_color',
 			array(
-				'label'     => __( 'Pricing Price Color', 'elementbucket-lite' ),
+				'label'     => __( 'Pricing Price Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -544,7 +544,7 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_price_typography',
-				'label'    => __( 'Pricing Price Typography', 'elementbucket-lite' ),
+				'label'    => __( 'Pricing Price Typography', 'cs-element-bucket-lite' ),
 				'selector' => '{{WRAPPER}} .single-pricing .plan-price',
 			)
 		);
@@ -553,14 +553,14 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'pricing_btn',
 			array(
-				'label' => __( 'Button', 'elementbucket-lite' ),
+				'label' => __( 'Button', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'btn_margin',
 			array(
-				'label'      => esc_html__( 'Button Margin', 'elementbucket-lite' ),
+				'label'      => esc_html__( 'Button Margin', 'cs-element-bucket-lite' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -575,7 +575,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_btn_color',
 			array(
-				'label'     => __( 'Pricing Button Color', 'elementbucket-lite' ),
+				'label'     => __( 'Pricing Button Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -587,7 +587,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_btn_hover_color',
 			array(
-				'label'     => __( 'Pricing Button Hover Color', 'elementbucket-lite' ),
+				'label'     => __( 'Pricing Button Hover Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -599,7 +599,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_btn_title_color',
 			array(
-				'label'     => __( 'Pricing Button Title Color', 'elementbucket-lite' ),
+				'label'     => __( 'Pricing Button Title Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -611,7 +611,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_btn_hover_title_color',
 			array(
-				'label'     => __( 'Pricing Button Hover Title Color', 'elementbucket-lite' ),
+				'label'     => __( 'Pricing Button Hover Title Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -624,7 +624,7 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_btn_title_typography',
-				'label'    => __( 'Pricing Button Title Typography', 'elementbucket-lite' ),
+				'label'    => __( 'Pricing Button Title Typography', 'cs-element-bucket-lite' ),
 				'selector' => '{{WRAPPER}} .rory-btn-primary',
 			)
 		);

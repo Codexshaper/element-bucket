@@ -42,7 +42,7 @@ class Client_Area extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Client Area', 'elementbucket-lite' );
+		return __( 'EB Client Area', 'cs-element-bucket-lite' );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Client_Area extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'elementbucket-lite' );
+		return array( 'cs-element-bucket-lite' );
 	}
 
 	/**
@@ -97,7 +97,7 @@ class Client_Area extends Widget {
 		$this->start_controls_section(
 			'settings_section',
 			array(
-				'label' => __( 'General Settings', 'elementbucket-lite' ),
+				'label' => __( 'General Settings', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -105,11 +105,11 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'sliding_control',
 			array(
-				'label'   => __( 'Sliding Style Control', 'elementbucket-lite' ),
+				'label'   => __( 'Sliding Style Control', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'style_01' => __( 'Style 01', 'elementbucket-lite' ),
-					'style_02' => __( 'Style 02', 'elementbucket-lite' ),
+					'style_01' => __( 'Style 01', 'cs-element-bucket-lite' ),
+					'style_02' => __( 'Style 02', 'cs-element-bucket-lite' ),
 				),
 				'default' => 'style_01',
 			)
@@ -119,9 +119,9 @@ class Client_Area extends Widget {
 		$repeater->add_control(
 			'image',
 			array(
-				'label'       => __( 'Image', 'elementbucket-lite' ),
+				'label'       => __( 'Image', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::MEDIA,
-				'description' => __( 'Upload image', 'elementbucket-lite' ),
+				'description' => __( 'Upload image', 'cs-element-bucket-lite' ),
 
 			)
 		);
@@ -129,7 +129,7 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'items',
 			array(
-				'label'       => __( 'Items', 'elementbucket-lite' ),
+				'label'       => __( 'Items', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
 				'default'     => array(
@@ -146,10 +146,10 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'button_control',
 			array(
-				'label'        => __( 'Slider Button On Off', 'elementbucket-lite' ),
+				'label'        => __( 'Slider Button On Off', 'cs-element-bucket-lite' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', 'elementbucket-lite' ),
-				'label_off'    => __( 'No', 'elementbucket-lite' ),
+				'label_on'     => __( 'Yes', 'cs-element-bucket-lite' ),
+				'label_off'    => __( 'No', 'cs-element-bucket-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -158,9 +158,9 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'next_slider',
 			array(
-				'label'       => __( 'Next Icon', 'elementbucket-lite' ),
+				'label'       => __( 'Next Icon', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::MEDIA,
-				'description' => __( 'Upload Image', 'elementbucket-lite' ),
+				'description' => __( 'Upload Image', 'cs-element-bucket-lite' ),
 				'condition'   => array(
 					'button_control' => 'yes',
 				),
@@ -169,9 +169,9 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'prev_slider',
 			array(
-				'label'       => __( 'Previous Icon', 'elementbucket-lite' ),
+				'label'       => __( 'Previous Icon', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::MEDIA,
-				'description' => __( 'Upload Image', 'elementbucket-lite' ),
+				'description' => __( 'Upload Image', 'cs-element-bucket-lite' ),
 				'condition'   => array(
 					'button_control' => 'yes',
 				),
@@ -184,7 +184,7 @@ class Client_Area extends Widget {
 		$this->start_controls_section(
 			'styling_section',
 			array(
-				'label' => __( 'Styling Settings', 'elementbucket-lite' ),
+				'label' => __( 'Styling Settings', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);

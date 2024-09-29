@@ -67,7 +67,7 @@ class $CLASS$ extends BaseModule {
 			'$WIDGET_NAME$',
 			$this->get_css_assets_url( '$WIDGET_NAME$', null, true, true ),
 			[],
-			ELEMENT_BUCKET_LITE_VERSION
+			CS_ELEMENT_BUCKET_LITE_VERSION
 		);
 	}
 }

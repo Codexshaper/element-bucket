@@ -17,7 +17,7 @@ use CodexShaper\ElementBucketLite\Plugin;
  *
  * @return Plugin instance.
  */
-function get_element_bucket_lite_plugin() {
+function get_CS_ELEMENT_BUCKET_LITE_plugin() {
 	return Plugin::instance();
 }
 

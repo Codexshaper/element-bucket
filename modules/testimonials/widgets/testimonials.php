@@ -42,7 +42,7 @@ class Testimonials extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Testimonials', 'elementbucket-lite' );
+		return __( 'EB Testimonials', 'cs-element-bucket-lite' );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Testimonials extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'elementbucket-lite' );
+		return array( 'cs-element-bucket-lite' );
 	}
 
 	/**
@@ -111,7 +111,7 @@ class Testimonials extends Widget {
 		$this->start_controls_section(
 			'settings_section',
 			array(
-				'label' => __( 'General Settings', 'elementbucket-lite' ),
+				'label' => __( 'General Settings', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -119,34 +119,34 @@ class Testimonials extends Widget {
 		$repeater->add_control(
 			'description',
 			array(
-				'label'   => __( 'Description', 'elementbucket-lite' ),
+				'label'   => __( 'Description', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => __( '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alisa ullamco laboris mollit anim id est laborum.”', 'elementbucket-lite' ),
+				'default' => __( '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alisa ullamco laboris mollit anim id est laborum.”', 'cs-element-bucket-lite' ),
 			)
 		);
 		$repeater->add_control(
 			'designation',
 			array(
-				'label'   => __( 'Designation', 'elementbucket-lite' ),
+				'label'   => __( 'Designation', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => __( 'Marketer', 'elementbucket-lite' ),
+				'default' => __( 'Marketer', 'cs-element-bucket-lite' ),
 			)
 		);
 		$repeater->add_control(
 			'name',
 			array(
-				'label'   => __( 'Name', 'elementbucket-lite' ),
+				'label'   => __( 'Name', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => __( 'Leonardo Cora', 'elementbucket-lite' ),
+				'default' => __( 'Leonardo Cora', 'cs-element-bucket-lite' ),
 			)
 		);
 		$repeater->add_control(
 			'image_button',
 			array(
-				'label'        => __( 'Image Hide Unhide', 'elementbucket-lite' ),
+				'label'        => __( 'Image Hide Unhide', 'cs-element-bucket-lite' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', 'elementbucket-lite' ),
-				'label_off'    => __( 'No', 'elementbucket-lite' ),
+				'label_on'     => __( 'Yes', 'cs-element-bucket-lite' ),
+				'label_off'    => __( 'No', 'cs-element-bucket-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -155,10 +155,10 @@ class Testimonials extends Widget {
 		$repeater->add_control(
 			'main_img',
 			array(
-				'label'       => __( 'Main Image', 'elementbucket-lite' ),
+				'label'       => __( 'Main Image', 'cs-element-bucket-lite' ),
 				'type'        => Controls_Manager::MEDIA,
 				'show_label'  => false,
-				'description' => __( 'Main image', 'elementbucket-lite' ),
+				'description' => __( 'Main image', 'cs-element-bucket-lite' ),
 				'default'     => array(
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				),
@@ -170,11 +170,11 @@ class Testimonials extends Widget {
 		$repeater->add_control(
 			'description_control',
 			array(
-				'label'   => __( 'Description Position', 'elementbucket-lite' ),
+				'label'   => __( 'Description Position', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'up'   => __( 'Up', 'elementbucket-lite' ),
-					'down' => __( 'Down', 'elementbucket-lite' ),
+					'up'   => __( 'Up', 'cs-element-bucket-lite' ),
+					'down' => __( 'Down', 'cs-element-bucket-lite' ),
 				),
 				'default' => 'up',
 			)
@@ -182,7 +182,7 @@ class Testimonials extends Widget {
 		$this->add_control(
 			'testimonial_items',
 			array(
-				'label'   => __( 'Testimonial Item', 'elementbucket-lite' ),
+				'label'   => __( 'Testimonial Item', 'cs-element-bucket-lite' ),
 				'type'    => Controls_Manager::REPEATER,
 				'fields'  => $repeater->get_controls(),
 				'default' => array(
@@ -197,10 +197,10 @@ class Testimonials extends Widget {
 		$this->add_control(
 			'button_control',
 			array(
-				'label'        => __( 'Next Previous Button On Off', 'elementbucket-lite' ),
+				'label'        => __( 'Next Previous Button On Off', 'cs-element-bucket-lite' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', 'elementbucket-lite' ),
-				'label_off'    => __( 'No', 'elementbucket-lite' ),
+				'label_on'     => __( 'Yes', 'cs-element-bucket-lite' ),
+				'label_off'    => __( 'No', 'cs-element-bucket-lite' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -212,7 +212,7 @@ class Testimonials extends Widget {
 		$this->start_controls_section(
 			'styling_section',
 			array(
-				'label' => __( 'Styling Settings', 'elementbucket-lite' ),
+				'label' => __( 'Styling Settings', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -220,14 +220,14 @@ class Testimonials extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'description_typography',
-				'label'    => __( 'Description Typography', 'elementbucket-lite' ),
+				'label'    => __( 'Description Typography', 'cs-element-bucket-lite' ),
 				'selector' => '{{WRAPPER}} .content',
 			)
 		);
 		$this->add_control(
 			'description_color',
 			array(
-				'label'     => __( 'Description Color', 'elementbucket-lite' ),
+				'label'     => __( 'Description Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .content' => 'color: {{VALUE}}',
@@ -238,21 +238,21 @@ class Testimonials extends Widget {
 			'description_show_hr',
 			array(
 				'type'  => Controls_Manager::DIVIDER,
-				'label' => __( 'description show hr', 'elementbucket-lite' ),
+				'label' => __( 'description show hr', 'cs-element-bucket-lite' ),
 			)
 		);
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'name_typography',
-				'label'    => __( 'name Typography', 'elementbucket-lite' ),
+				'label'    => __( 'name Typography', 'cs-element-bucket-lite' ),
 				'selector' => '{{WRAPPER}} .name',
 			)
 		);
 		$this->add_control(
 			'name_color',
 			array(
-				'label'     => __( 'Name Color', 'elementbucket-lite' ),
+				'label'     => __( 'Name Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .name' => 'color: {{VALUE}}',
@@ -263,21 +263,21 @@ class Testimonials extends Widget {
 			'name_show_hr',
 			array(
 				'type'  => Controls_Manager::DIVIDER,
-				'label' => __( 'name show hr', 'elementbucket-lite' ),
+				'label' => __( 'name show hr', 'cs-element-bucket-lite' ),
 			)
 		);
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'designation_typography',
-				'label'    => __( 'Designation Typography', 'elementbucket-lite' ),
+				'label'    => __( 'Designation Typography', 'cs-element-bucket-lite' ),
 				'selector' => '{{WRAPPER}} .designation',
 			)
 		);
 		$this->add_control(
 			'designation_color',
 			array(
-				'label'     => __( 'Designation Color', 'elementbucket-lite' ),
+				'label'     => __( 'Designation Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .designation' => 'color: {{VALUE}}',
@@ -288,21 +288,21 @@ class Testimonials extends Widget {
 			'designation_show_hr',
 			array(
 				'type'  => Controls_Manager::DIVIDER,
-				'label' => __( 'designation show hr', 'elementbucket-lite' ),
+				'label' => __( 'designation show hr', 'cs-element-bucket-lite' ),
 			)
 		);
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'      => 'next_prev_typography',
-				'label'     => __( 'Next and Previous Typography', 'elementbucket-lite' ),
+				'label'     => __( 'Next and Previous Typography', 'cs-element-bucket-lite' ),
 				'selectors' => array( '{{WRAPPER}} .prev-btn', '{{WRAPPER}} .next-btn' ),
 			)
 		);
 		$this->add_control(
 			'next_prev_color',
 			array(
-				'label'     => __( ' Next and Previous Text Color', 'elementbucket-lite' ),
+				'label'     => __( ' Next and Previous Text Color', 'cs-element-bucket-lite' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .prev-btn' => 'color: {{VALUE}}',
@@ -314,7 +314,7 @@ class Testimonials extends Widget {
 		$this->start_controls_section(
 			'testimonial_background_color',
 			array(
-				'label' => __( 'Testimonial Background Color', 'elementbucket-lite' ),
+				'label' => __( 'Testimonial Background Color', 'cs-element-bucket-lite' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -324,7 +324,7 @@ class Testimonials extends Widget {
 			$this->start_controls_tab(
 				'testimonial_bg_normal_tab',
 				array(
-					'label' => __( 'Normal', 'elementbucket-lite' ),
+					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
 				)
 			);
 			$this->add_group_control(
@@ -340,7 +340,7 @@ class Testimonials extends Widget {
 			$this->start_controls_tab(
 				'testimonial_bg_hover_tab',
 				array(
-					'label' => __( 'Hover', 'elementbucket-lite' ),
+					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
 				)
 			);
 			$this->add_group_control(

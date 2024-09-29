@@ -49,7 +49,7 @@ final class ModuleManager {
 	public function __construct() {
 		$modules = array();
 
-		$module_directory = trailingslashit( ELEMENT_BUCKET_LITE_PATH ) . 'modules/*/';
+		$module_directory = trailingslashit( CS_ELEMENT_BUCKET_LITE_PATH ) . 'modules/*/';
 		foreach ( glob( $module_directory ) as $path ) {
 			if ( is_dir( $path ) ) {
 				$parts  = explode( '/', untrailingslashit( $path ) );

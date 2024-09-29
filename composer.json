@@ -1,0 +1,39 @@
+{
+  "name": "codexshaper/elementbucket-lite",
+  "description": "A premium widget bucket for elementor.",
+  "type": "library",
+  "license": "gpl-2.0",
+  "version": "1.0.0",
+  "keywords": [
+    "wordpress",
+    "plugin"
+  ],
+  "homepage": "https://github.com/Codexshaper/elementbucket-lite/",
+  "autoload": {
+    "psr-4": {
+      "CodexShaper\\ElementBucketLite\\": [
+        "src/",
+        "dev/"
+      ]
+    }
+  },
+  "authors": [
+    {
+      "name": "Md Abu Ahsan Basir",
+      "email": "maab.career@gmil.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "3.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

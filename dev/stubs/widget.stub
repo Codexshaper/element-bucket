@@ -1,0 +1,145 @@
+<?php
+/**
+ * $CLASS$ Widget file
+ *
+ * @category   Widget
+ * @package    ElementBucketLite
+ * @author     CodexShaper <info@codexshaper.com>
+ * @license    https://www.gnu.org/licenses/gpl-2.0.html
+ * @link       https://elementbucket.com
+ * @since      1.0.0
+ */
+
+namespace $NAMESPACE$;
+
+use CodexShaper\ElementBucketLite\Base\Widget;
+use Elementor\Controls_Manager;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit(); // Exit if access directly.
+}
+
+/**
+ * $CLASS$ widget class
+ *
+ * @category   Class
+ * @package    ElementBucketLite
+ * @author     CodexShaper <info@codexshaper.com>
+ * @license    https://www.gnu.org/licenses/gpl-2.0.html
+ * @link       https://elementbucket.com
+ * @since      1.0.0
+ */
+class $CLASS$ extends Widget
+{
+
+    /**
+     * Get widget name.
+     *
+     * @return string Widget name.
+     */
+    public function get_name()
+    {
+        return '$WIDGET_NAME$';
+    }
+
+    /**
+     * Get widget title.
+     *
+     * @return string Widget title.
+     */
+    public function get_title()
+    {
+        return __('EB $TITLE$', 'elementbucket-lite');
+    }
+
+    /**
+	 * Get widget icon.
+	 *
+	 * Retrieve the widget icon.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 * @return string Widget icon.
+	 */
+	public function get_icon() {
+		return 'eicon-apps';
+	}
+
+    /**
+     * Get widget keywords.
+     *
+     * @return array Widget keywords.
+     */
+    public function get_keywords()
+    {
+        return ['$TITLE$', "CodexShaper", 'Element Bucket'];
+    }
+
+    /**
+	 * Get style dependencies.
+	 *
+	 * Retrieve the list of style dependencies the widget requires.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 * @return array Widget style dependencies.
+	 */
+	public function get_style_depends(): array {
+		return [ '$WIDGET_NAME$' ];
+	}
+
+    /**
+     * Register Elementor widget controls.
+     * Adds different input fields to allow the user to change and customize the widget settings.
+     *
+     * @access protected
+     *
+     * @return void
+     */
+    protected function register_controls()
+    {
+
+        $this->start_controls_section(
+            'settings_section',
+            [
+                'label' => __('General Settings', 'elementbucket-lite'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
+        $this->add_control('section-title', [
+            'label' => __('Section Title', 'elementbucket-lite'),
+            'type' =>  Controls_Manager::TEXT,
+        ]);
+        $this->end_controls_section();
+
+        // Style tab start.
+        $this->start_controls_section(
+            'styling_section',
+            [
+                'label' => __('Styling Settings', 'elementbucket-lite'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+        $this->end_controls_section();
+    }
+
+    /**
+     * Render Elementor widget output on the frontend.
+     *
+     * Written in PHP and used to generate the final HTML.
+     *
+     * @since 1.0.0
+     * @access protected
+     *
+     * @return void
+     */
+    protected function render()
+    {
+        $settings = $this->get_settings_for_display();
+    ?>
+        <h2>$TITLE$</h2>
+    <?php
+    }
+}

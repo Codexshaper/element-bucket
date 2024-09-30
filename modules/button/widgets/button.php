@@ -3,16 +3,16 @@
  * Button Widget file
  *
  * @category   Widget
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Modules\Button\Widgets;
+namespace CodexShaper\ElementBucket\Modules\Button\Widgets;
 
-use CodexShaper\ElementBucketLite\Base\Widget;
+use CodexShaper\ElementBucket\Base\Widget;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Typography;
@@ -28,10 +28,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Button widget class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class Button extends Widget {
@@ -51,7 +51,7 @@ class Button extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Button', 'cs-element-bucket-lite' );
+		return __( 'EB Button', 'element-bucket' );
 	}
 
 	/**
@@ -83,7 +83,7 @@ class Button extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'cs-element-bucket-lite' );
+		return array( 'element-bucket' );
 	}
 
 	/**
@@ -113,18 +113,18 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'general_settings_section',
 			array(
-				'label' => __( 'General Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'General Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'eb_button_tag',
 			array(
-				'label'   => __( 'Button Tag', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Button Tag', 'element-bucket' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'a'      => __( 'link', 'cs-element-bucket-lite' ),
-					'button' => __( 'button', 'cs-element-bucket-lite' ),
+					'a'      => __( 'link', 'element-bucket' ),
+					'button' => __( 'button', 'element-bucket' ),
 				),
 				'default' => 'a',
 			)
@@ -132,11 +132,11 @@ class Button extends Widget {
 		$this->add_control(
 			'eb_button_type',
 			array(
-				'label'   => __( 'Button Type', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Button Type', 'element-bucket' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'default' => __( 'Default', 'cs-element-bucket-lite' ),
-					'circle'  => __( 'Circle', 'cs-element-bucket-lite' ),
+					'default' => __( 'Default', 'element-bucket' ),
+					'circle'  => __( 'Circle', 'element-bucket' ),
 				),
 				'default' => 'default',
 			)
@@ -144,15 +144,15 @@ class Button extends Widget {
 		$this->add_control(
 			'eb_button_text',
 			array(
-				'label'   => __( 'Button Text', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Button Text', 'element-bucket' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => __( 'EB Button', 'cs-element-bucket-lite' ),
+				'default' => __( 'EB Button', 'element-bucket' ),
 			)
 		);
 		$this->add_control(
 			'eb_link_button_url',
 			array(
-				'label'       => __( 'Button url', 'cs-element-bucket-lite' ),
+				'label'       => __( 'Button url', 'element-bucket' ),
 				'type'        => Controls_Manager::URL,
 				'options'     => array( 'url', 'is_external', 'nofollow' ),
 				'default'     => array(
@@ -170,25 +170,25 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'icon_settings_section',
 			array(
-				'label' => __( 'Icon Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Icon Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'eb_button_icon',
 			array(
-				'label' => __( 'Button Icon', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Icon', 'element-bucket' ),
 				'type'  => Controls_Manager::ICONS,
 			)
 		);
 		$this->add_control(
 			'eb_default_button_icon_alignment',
 			array(
-				'label'     => __( 'Icon Alignment', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Icon Alignment', 'element-bucket' ),
 				'type'      => Controls_Manager::SELECT,
 				'options'   => array(
-					'icon-right' => __( 'Right', 'cs-element-bucket-lite' ),
-					'icon-left'  => __( 'Left', 'cs-element-bucket-lite' ),
+					'icon-right' => __( 'Right', 'element-bucket' ),
+					'icon-left'  => __( 'Left', 'element-bucket' ),
 				),
 				'default'   => 'icon-right',
 				'condition' => array(
@@ -199,11 +199,11 @@ class Button extends Widget {
 		$this->add_control(
 			'eb_circle_button_icon_alignment',
 			array(
-				'label'     => __( 'Icon Alignment', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Icon Alignment', 'element-bucket' ),
 				'type'      => Controls_Manager::SELECT,
 				'options'   => array(
-					'icon-top'    => __( 'Top', 'cs-element-bucket-lite' ),
-					'icon-bottom' => __( 'Bottom', 'cs-element-bucket-lite' ),
+					'icon-top'    => __( 'Top', 'element-bucket' ),
+					'icon-bottom' => __( 'Bottom', 'element-bucket' ),
 				),
 				'default'   => 'icon-bottom',
 				'condition' => array( 'eb_button_type' => 'circle' ),
@@ -215,20 +215,20 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'eb_button_overlay_settings_section',
 			array(
-				'label' => __( 'Overlay Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Overlay Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'eb_default_button_overlay_effect',
 			array(
-				'label'     => __( 'Hover Overlay Effect Style', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Hover Overlay Effect Style', 'element-bucket' ),
 				'type'      => Controls_Manager::SELECT,
 				'options'   => array(
-					'no-hover-effect'    => __( 'None', 'cs-element-bucket-lite' ),
-					'hover-effect-one'   => __( 'Effect One', 'cs-element-bucket-lite' ),
-					'hover-effect-two'   => __( 'Effect Two', 'cs-element-bucket-lite' ),
-					'hover-effect-three' => __( 'Effect Three', 'cs-element-bucket-lite' ),
+					'no-hover-effect'    => __( 'None', 'element-bucket' ),
+					'hover-effect-one'   => __( 'Effect One', 'element-bucket' ),
+					'hover-effect-two'   => __( 'Effect Two', 'element-bucket' ),
+					'hover-effect-three' => __( 'Effect Three', 'element-bucket' ),
 				),
 				'default'   => 'no-hover-effect',
 				'condition' => array( 'eb_button_type' => 'default' ),
@@ -237,11 +237,11 @@ class Button extends Widget {
 		$this->add_control(
 			'eb_circle_button_overlay_effect',
 			array(
-				'label'     => __( 'Hover Overlay Effect Style', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Hover Overlay Effect Style', 'element-bucket' ),
 				'type'      => Controls_Manager::SELECT,
 				'options'   => array(
-					'no-hover-effect'  => __( 'None', 'cs-element-bucket-lite' ),
-					'hover-effect-one' => __( 'Effect One', 'cs-element-bucket-lite' ),
+					'no-hover-effect'  => __( 'None', 'element-bucket' ),
+					'hover-effect-one' => __( 'Effect One', 'element-bucket' ),
 				),
 				'default'   => 'no-hover-effect',
 				'condition' => array( 'eb_button_type' => 'circle' ),
@@ -253,14 +253,14 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'custom_settings_section',
 			array(
-				'label' => __( 'Custom Class Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Custom Class Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'eb_button_custom_class',
 			array(
-				'label'       => __( 'Custom Button Class', 'cs-element-bucket-lite' ),
+				'label'       => __( 'Custom Button Class', 'element-bucket' ),
 				'type'        => Controls_Manager::TEXT,
 				'description' => 'If you need to add any specific class.',
 			)
@@ -271,7 +271,7 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'eb_button_sizing_styling_section',
 			array(
-				'label' => __( 'Button Size', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Size', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -279,7 +279,7 @@ class Button extends Widget {
 			'eb_default_button_height',
 			array(
 				'type'      => Controls_Manager::SLIDER,
-				'label'     => __( 'Button Height', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Button Height', 'element-bucket' ),
 				'range'     => array(
 					'px' => array(
 						'min' => 0,
@@ -297,7 +297,7 @@ class Button extends Widget {
 			'eb_circle_button_size',
 			array(
 				'type'      => Controls_Manager::SLIDER,
-				'label'     => __( 'Button Width and Height', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Button Width and Height', 'element-bucket' ),
 				'range'     => array(
 					'px' => array(
 						'min' => 0,
@@ -314,7 +314,7 @@ class Button extends Widget {
 		$this->add_responsive_control(
 			'eb_button_padding',
 			array(
-				'label'      => __( 'Button Padding', 'cs-element-bucket-lite' ),
+				'label'      => __( 'Button Padding', 'element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -325,7 +325,7 @@ class Button extends Widget {
 		$this->add_responsive_control(
 			'eb_button_border_radius',
 			array(
-				'label'      => __( 'Button Border Radius', 'cs-element-bucket-lite' ),
+				'label'      => __( 'Button Border Radius', 'element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -339,7 +339,7 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'eb_button_bg_color_styling',
 			array(
-				'label' => __( 'Button Background', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Background', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -349,7 +349,7 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_bg_normal_tab',
 				array(
-					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
+					'label' => __( 'Normal', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
@@ -365,7 +365,7 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_bg_hover_tab',
 				array(
-					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
+					'label' => __( 'Hover', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
@@ -384,7 +384,7 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'eb_button_text_color_styling',
 			array(
-				'label' => __( 'Button Text', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Text', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -394,14 +394,14 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_text_normal_tab',
 				array(
-					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
+					'label' => __( 'Normal', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
 				Group_Control_Typography::get_type(),
 				array(
 					'name'      => 'eb_button_text_typography',
-					'label'     => __( 'Text Typography', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Text Typography', 'element-bucket' ),
 					'selectors' => array(
 						'{{WRAPPER}} .eb-btn',
 					),
@@ -410,7 +410,7 @@ class Button extends Widget {
 			$this->add_control(
 				'eb_button_text_color',
 				array(
-					'label'     => __( 'Text Color', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Text Color', 'element-bucket' ),
 					'type'      => Controls_Manager::COLOR,
 					'selectors' => array(
 						'{{WRAPPER}} .eb-btn' => 'color: {{VALUE}}',
@@ -421,13 +421,13 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_text_hover_tab',
 				array(
-					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
+					'label' => __( 'Hover', 'element-bucket' ),
 				)
 			);
 			$this->add_control(
 				'eb_button_text_hover_color',
 				array(
-					'label'     => __( 'Text Color', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Text Color', 'element-bucket' ),
 					'type'      => Controls_Manager::COLOR,
 					'selectors' => array(
 						'{{WRAPPER}} .eb-btn:hover' => 'color: {{VALUE}}',
@@ -442,7 +442,7 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'eb_button_border_styling',
 			array(
-				'label' => __( 'Button Border', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Border', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -452,14 +452,14 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_border_normal_tab',
 				array(
-					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
+					'label' => __( 'Normal', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
 				Group_Control_Border::get_type(),
 				array(
 					'name'     => 'eb_button_border_normal',
-					'label'    => __( 'Border', 'cs-element-bucket-lite' ),
+					'label'    => __( 'Border', 'element-bucket' ),
 					'selector' => '{{WRAPPER}} .eb-btn',
 				)
 			);
@@ -467,13 +467,13 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_border_hover_tab',
 				array(
-					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
+					'label' => __( 'Hover', 'element-bucket' ),
 				)
 			);
 			$this->add_control(
 				'eb_button_border_hover_color',
 				array(
-					'label'     => __( 'Border Color', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Border Color', 'element-bucket' ),
 					'type'      => Controls_Manager::COLOR,
 					'selectors' => array(
 						'{{WRAPPER}} .eb-btn:hover' => 'border-color: {{VALUE}}',
@@ -488,7 +488,7 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'eb_button_icon_color_styling',
 			array(
-				'label' => __( 'Button Icon', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Icon', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -498,14 +498,14 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_icon_color_normal_tab',
 				array(
-					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
+					'label' => __( 'Normal', 'element-bucket' ),
 				)
 			);
 			$this->add_responsive_control(
 				'eb_button_icon_size',
 				array(
 					'type'      => Controls_Manager::SLIDER,
-					'label'     => __( 'Icon Size', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Icon Size', 'element-bucket' ),
 					'range'     => array(
 						'px' => array(
 							'min' => 0,
@@ -521,7 +521,7 @@ class Button extends Widget {
 			$this->add_control(
 				'eb_button_icon_color',
 				array(
-					'label'     => __( 'Icon Color', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Icon Color', 'element-bucket' ),
 					'type'      => Controls_Manager::COLOR,
 					'selectors' => array(
 						'{{WRAPPER}} .eb-btn svg'      => 'fill: {{VALUE}}',
@@ -533,13 +533,13 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_icon_color_hover_tab',
 				array(
-					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
+					'label' => __( 'Hover', 'element-bucket' ),
 				)
 			);
 			$this->add_control(
 				'eb_button_icon_hover_color',
 				array(
-					'label'     => __( 'Icon Color', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Icon Color', 'element-bucket' ),
 					'type'      => Controls_Manager::COLOR,
 					'selectors' => array(
 						'{{WRAPPER}} .eb-btn:hover svg' => 'fill: {{VALUE}}',
@@ -555,7 +555,7 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'eb_button_overlay_background_styling',
 			array(
-				'label' => __( 'Button Overlay', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Overlay', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -563,7 +563,7 @@ class Button extends Widget {
 			Group_Control_Background::get_type(),
 			array(
 				'name'      => 'eb_button_before_after_bg_color',
-				'label'     => __( 'On Hover Overlay Bg Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'On Hover Overlay Bg Color', 'element-bucket' ),
 				'types'     => array( 'classic', 'gradient' ),
 				'selectors' => '{{WRAPPER}} .eb-btn:hover::before, {{WRAPPER}} .eb-btn:hover::after',
 			)
@@ -574,7 +574,7 @@ class Button extends Widget {
 		$this->start_controls_section(
 			'eb_button_boxs_hadow_styling',
 			array(
-				'label' => __( 'Button Box Shadow', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Box Shadow', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -584,7 +584,7 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_boxs_hadow_normal_tab',
 				array(
-					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
+					'label' => __( 'Normal', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
@@ -598,7 +598,7 @@ class Button extends Widget {
 			$this->start_controls_tab(
 				'eb_button_boxs_hadow_hover_tab',
 				array(
-					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
+					'label' => __( 'Hover', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(

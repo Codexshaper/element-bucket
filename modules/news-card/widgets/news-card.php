@@ -3,16 +3,16 @@
  * News Card Widget file
  *
  * @category   Widget
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Modules\NewsCard\Widgets;
+namespace CodexShaper\ElementBucket\Modules\NewsCard\Widgets;
 
-use CodexShaper\ElementBucketLite\Base\Widget;
+use CodexShaper\ElementBucket\Base\Widget;
 use Elementor\Controls_Manager;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -23,10 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * News Card widget class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class News_Card extends Widget {
@@ -46,7 +46,7 @@ class News_Card extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB News Card', 'cs-element-bucket-lite' );
+		return __( 'EB News Card', 'element-bucket' );
 	}
 
 	/**
@@ -78,7 +78,7 @@ class News_Card extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'cs-element-bucket-lite' );
+		return array( 'element-bucket' );
 	}
 
 	/**
@@ -122,7 +122,7 @@ class News_Card extends Widget {
 		$this->start_controls_section(
 			'settings_section',
 			array(
-				'label' => __( 'General Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'General Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -130,34 +130,34 @@ class News_Card extends Widget {
 		$repeater->add_control(
 			'author',
 			array(
-				'label'   => __( 'Author', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Author', 'element-bucket' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => __( 'by CodeXshaper LLC.', 'cs-element-bucket-lite' ),
+				'default' => __( 'by CodeXshaper LLC.', 'element-bucket' ),
 			)
 		);
 		$repeater->add_control(
 			'date',
 			array(
-				'label'   => __( 'Date', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Date', 'element-bucket' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => __( '17 September,2024', 'cs-element-bucket-lite' ),
+				'default' => __( '17 September,2024', 'element-bucket' ),
 			)
 		);
 		$repeater->add_control(
 			'title',
 			array(
-				'label'   => __( 'Title', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Title', 'element-bucket' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => __( 'The Industry Squirms, as It Gets as What It Asked For Done', 'cs-element-bucket-lite' ),
+				'default' => __( 'The Industry Squirms, as It Gets as What It Asked For Done', 'element-bucket' ),
 			)
 		);
 		$repeater->add_control(
 			'image_button',
 			array(
-				'label'        => __( 'Image Hide Unhide', 'cs-element-bucket-lite' ),
+				'label'        => __( 'Image Hide Unhide', 'element-bucket' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', 'cs-element-bucket-lite' ),
-				'label_off'    => __( 'No', 'cs-element-bucket-lite' ),
+				'label_on'     => __( 'Yes', 'element-bucket' ),
+				'label_off'    => __( 'No', 'element-bucket' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -166,10 +166,10 @@ class News_Card extends Widget {
 		$repeater->add_control(
 			'main_img',
 			array(
-				'label'       => __( 'Main Image', 'cs-element-bucket-lite' ),
+				'label'       => __( 'Main Image', 'element-bucket' ),
 				'type'        => Controls_Manager::MEDIA,
 				'show_label'  => false,
-				'description' => __( 'Main image', 'cs-element-bucket-lite' ),
+				'description' => __( 'Main image', 'element-bucket' ),
 				'default'     => array(
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				),
@@ -181,11 +181,11 @@ class News_Card extends Widget {
 		$repeater->add_control(
 			'main_button_control',
 			array(
-				'label'   => __( 'Button Hide Unhide', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Button Hide Unhide', 'element-bucket' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'unhide' => __( 'Unhide', 'cs-element-bucket-lite' ),
-					'hide'   => __( 'Hide', 'cs-element-bucket-lite' ),
+					'unhide' => __( 'Unhide', 'element-bucket' ),
+					'hide'   => __( 'Hide', 'element-bucket' ),
 				),
 				'default' => 'unhide',
 			)
@@ -193,9 +193,9 @@ class News_Card extends Widget {
 		$repeater->add_control(
 			'button_text',
 			array(
-				'label'     => __( 'Button Text', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Button Text', 'element-bucket' ),
 				'type'      => Controls_Manager::TEXT,
-				'default'   => __( 'More Details', 'cs-element-bucket-lite' ),
+				'default'   => __( 'More Details', 'element-bucket' ),
 				'condition' => array(
 					'main_button_control' => 'unhide',
 				),
@@ -205,7 +205,7 @@ class News_Card extends Widget {
 		$repeater->add_control(
 			'button_icon',
 			array(
-				'label'     => __( 'Button Icon', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Button Icon', 'element-bucket' ),
 				'type'      => Controls_Manager::ICONS,
 				'condition' => array(
 					'main_button_control' => 'unhide',
@@ -215,10 +215,10 @@ class News_Card extends Widget {
 		$repeater->add_control(
 			'btn_link',
 			array(
-				'label'       => __( 'Add URL Link', 'cs-element-bucket-lite' ),
+				'label'       => __( 'Add URL Link', 'element-bucket' ),
 				'type'        => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'cs-element-bucket-lite' ),
-				'description' => __( 'Enter the URL HERE', 'cs-element-bucket-lite' ),
+				'placeholder' => __( 'https://your-link.com', 'element-bucket' ),
+				'description' => __( 'Enter the URL HERE', 'element-bucket' ),
 				'default'     => array(
 					'url' => '#',
 				),
@@ -231,11 +231,11 @@ class News_Card extends Widget {
 		$repeater->add_control(
 			'details_position',
 			array(
-				'label'   => __( 'Details Info Position', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Details Info Position', 'element-bucket' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'left'  => __( 'Left', 'cs-element-bucket-lite' ),
-					'right' => __( 'Right', 'cs-element-bucket-lite' ),
+					'left'  => __( 'Left', 'element-bucket' ),
+					'right' => __( 'Right', 'element-bucket' ),
 				),
 				'default' => 'left',
 			)
@@ -244,7 +244,7 @@ class News_Card extends Widget {
 		$this->add_control(
 			'items',
 			array(
-				'label'   => __( 'News Card', 'cs-element-bucket-lite' ),
+				'label'   => __( 'News Card', 'element-bucket' ),
 				'type'    => Controls_Manager::REPEATER,
 				'fields'  => $repeater->get_controls(),
 				'default' => array(
@@ -263,7 +263,7 @@ class News_Card extends Widget {
 		$this->start_controls_section(
 			'styling_section',
 			array(
-				'label' => __( 'Styling Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Styling Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -271,14 +271,14 @@ class News_Card extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'author_typography',
-				'label'    => __( 'Author Typography', 'cs-element-bucket-lite' ),
+				'label'    => __( 'Author Typography', 'element-bucket' ),
 				'selector' => '{{WRAPPER}} .cat',
 			)
 		);
 		$this->add_control(
 			'author_color',
 			array(
-				'label'     => __( 'Author Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Author Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .cat' => 'color: {{VALUE}}',
@@ -288,7 +288,7 @@ class News_Card extends Widget {
 		$this->add_control(
 			'author_background_color',
 			array(
-				'label'     => __( 'Author Background Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Author Background Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .cat' => 'background-color: {{VALUE}}',
@@ -299,21 +299,21 @@ class News_Card extends Widget {
 			'author_show_hr',
 			array(
 				'type'  => Controls_Manager::DIVIDER,
-				'label' => __( 'author show hr', 'cs-element-bucket-lite' ),
+				'label' => __( 'author show hr', 'element-bucket' ),
 			)
 		);
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'date_typography',
-				'label'    => __( 'Date Typography', 'cs-element-bucket-lite' ),
+				'label'    => __( 'Date Typography', 'element-bucket' ),
 				'selector' => '{{WRAPPER}} .date',
 			)
 		);
 		$this->add_control(
 			'date_color',
 			array(
-				'label'     => __( 'Date Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Date Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .date' => 'color: {{VALUE}}',
@@ -325,21 +325,21 @@ class News_Card extends Widget {
 			'date_show_hr',
 			array(
 				'type'  => Controls_Manager::DIVIDER,
-				'label' => __( 'date show hr', 'cs-element-bucket-lite' ),
+				'label' => __( 'date show hr', 'element-bucket' ),
 			)
 		);
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'title_typography',
-				'label'    => __( 'Title Typography', 'cs-element-bucket-lite' ),
+				'label'    => __( 'Title Typography', 'element-bucket' ),
 				'selector' => '{{WRAPPER}} .title',
 			)
 		);
 		$this->add_control(
 			'title_color',
 			array(
-				'label'     => __( 'Title Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Title Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .title' => 'color: {{VALUE}}',
@@ -350,7 +350,7 @@ class News_Card extends Widget {
 			'title_show_hr',
 			array(
 				'type'  => Controls_Manager::DIVIDER,
-				'label' => __( 'title show hr', 'cs-element-bucket-lite' ),
+				'label' => __( 'title show hr', 'element-bucket' ),
 			)
 		);
 		$this->end_controls_section();
@@ -358,7 +358,7 @@ class News_Card extends Widget {
 		$this->start_controls_section(
 			'button_text_color_styling',
 			array(
-				'label' => __( 'Button Text', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Text', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -368,14 +368,14 @@ class News_Card extends Widget {
 			$this->start_controls_tab(
 				'button_text_normal_tab',
 				array(
-					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
+					'label' => __( 'Normal', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
 				\Elementor\Group_Control_Typography::get_type(),
 				array(
 					'name'      => 'button_text_typography',
-					'label'     => __( 'Text Typography', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Text Typography', 'element-bucket' ),
 					'selectors' => array(
 						'{{WRAPPER}} .read-more-btn-small',
 					),
@@ -384,7 +384,7 @@ class News_Card extends Widget {
 			$this->add_control(
 				'button_text_color',
 				array(
-					'label'     => __( 'Text Color', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Text Color', 'element-bucket' ),
 					'type'      => Controls_Manager::COLOR,
 					'selectors' => array(
 						'{{WRAPPER}} .read-more-btn-small' => 'color: {{VALUE}}',
@@ -395,13 +395,13 @@ class News_Card extends Widget {
 			$this->start_controls_tab(
 				'button_text_hover_tab',
 				array(
-					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
+					'label' => __( 'Hover', 'element-bucket' ),
 				)
 			);
 			$this->add_control(
 				'button_text_hover_color',
 				array(
-					'label'     => __( 'Text Color', 'cs-element-bucket-lite' ),
+					'label'     => __( 'Text Color', 'element-bucket' ),
 					'type'      => Controls_Manager::COLOR,
 					'selectors' => array(
 						'{{WRAPPER}} .read-more-btn-small:hover' => 'color: {{VALUE}}',
@@ -416,7 +416,7 @@ class News_Card extends Widget {
 		$this->start_controls_section(
 			'background',
 			array(
-				'label' => __( 'Card Background Color', 'cs-element-bucket-lite' ),
+				'label' => __( 'Card Background Color', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -426,7 +426,7 @@ class News_Card extends Widget {
 			$this->start_controls_tab(
 				'card_bg_normal_tab',
 				array(
-					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
+					'label' => __( 'Normal', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
@@ -442,7 +442,7 @@ class News_Card extends Widget {
 			$this->start_controls_tab(
 				'card_bg_hover_tab',
 				array(
-					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
+					'label' => __( 'Hover', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
@@ -461,7 +461,7 @@ class News_Card extends Widget {
 		$this->start_controls_section(
 			'button_background',
 			array(
-				'label' => __( 'Button Background', 'cs-element-bucket-lite' ),
+				'label' => __( 'Button Background', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -471,7 +471,7 @@ class News_Card extends Widget {
 			$this->start_controls_tab(
 				'button_bg_normal_tab',
 				array(
-					'label' => __( 'Normal', 'cs-element-bucket-lite' ),
+					'label' => __( 'Normal', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(
@@ -487,7 +487,7 @@ class News_Card extends Widget {
 			$this->start_controls_tab(
 				'button_bg_hover_tab',
 				array(
-					'label' => __( 'Hover', 'cs-element-bucket-lite' ),
+					'label' => __( 'Hover', 'element-bucket' ),
 				)
 			);
 			$this->add_group_control(

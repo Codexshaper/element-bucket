@@ -3,17 +3,17 @@
  * Module manager file
  *
  * @category   Manager
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Managers;
+namespace CodexShaper\ElementBucket\Managers;
 
 use Elementor\Plugin;
-use CodexShaper\ElementBucketLite\Base\BaseModule;
+use CodexShaper\ElementBucket\Base\BaseModule;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -23,10 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  *  Module manager class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 final class ModuleManager {
@@ -49,7 +49,7 @@ final class ModuleManager {
 	public function __construct() {
 		$modules = array();
 
-		$module_directory = trailingslashit( CS_ELEMENT_BUCKET_LITE_PATH ) . 'modules/*/';
+		$module_directory = trailingslashit( CS_ELEMENT_BUCKET_PATH ) . 'modules/*/';
 		foreach ( glob( $module_directory ) as $path ) {
 			if ( is_dir( $path ) ) {
 				$parts  = explode( '/', untrailingslashit( $path ) );
@@ -64,7 +64,7 @@ final class ModuleManager {
 		foreach ( $modules as $module_name ) {
 			$words            = str_replace( '-', ' ', $module_name );
 			$module_namespace = str_replace( ' ', '', ucwords( $words ) );
-			$module_class     = '\CodexShaper\ElementBucketLite\Modules\\' . $module_namespace . '\Module';
+			$module_class     = '\CodexShaper\ElementBucket\Modules\\' . $module_namespace . '\Module';
 
 			/** @var BaseModule $module_class */
 			$experimental_data = $module_class::get_experimental_data();

@@ -3,10 +3,10 @@
  * $CLASS$ module file
  *
  * @category   Module
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
@@ -16,16 +16,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-use CodexShaper\ElementBucketLite\Base\Module as BaseModule;
+use CodexShaper\ElementBucket\Base\Module as BaseModule;
 
 /**
  * $CLASS$ module class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class $CLASS$ extends BaseModule {

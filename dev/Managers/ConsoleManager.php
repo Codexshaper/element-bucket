@@ -3,16 +3,16 @@
  * Console manager file
  *
  * @category   Manager
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Managers;
+namespace CodexShaper\ElementBucket\Managers;
 
-use CodexShaper\ElementBucketLite\Commands\ModuleMake;
+use CodexShaper\ElementBucket\Commands\ModuleMake;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // exit if access directly.
@@ -22,10 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Console manager class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class ConsoleManager {
@@ -37,7 +37,7 @@ class ConsoleManager {
 	 * @access private
 	 * @static
 	 *
-	 * @var \CodexShaper\ElementBucketLite\Managers\ConsoleManager The single instance of the class.
+	 * @var \CodexShaper\ElementBucket\Managers\ConsoleManager The single instance of the class.
 	 */
 	private static $instance = null;
 
@@ -62,7 +62,7 @@ class ConsoleManager {
 	 * @access public
 	 * @static
 	 *
-	 * @return \CodexShaper\ElementBucketLite\Managers\ConsoleManager An instance of the class.
+	 * @return \CodexShaper\ElementBucket\Managers\ConsoleManager An instance of the class.
 	 */
 	public static function instance() {
 
@@ -84,7 +84,7 @@ class ConsoleManager {
 	 * @return void
 	 */
 	public function __construct() {
-		if ( CS_ELEMENT_BUCKET_LITE_CLI === true && defined( 'WP_CLI' ) && WP_CLI ) {
+		if ( CS_ELEMENT_BUCKET_CLI === true && defined( 'WP_CLI' ) && WP_CLI ) {
 			$this->register_commands();
 		}
 	}

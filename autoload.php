@@ -3,14 +3,14 @@
  * Autoload file
  *
  * @category   Autoload
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite;
+namespace CodexShaper\ElementBucket;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // exit if access directly.
@@ -20,10 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class Autoloader
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class Autoload {
@@ -34,7 +34,7 @@ class Autoload {
 	 * @since 1.0.0
 	 * @access private
 	 * @static
-	 * @var \ElementBucketLite\Autoload The single instance of the class.
+	 * @var \ElementBucket\Autoload The single instance of the class.
 	 */
 	private static $instance = null;
 
@@ -59,7 +59,7 @@ class Autoload {
 	 * @since 1.0.0
 	 * @access public
 	 * @static
-	 * @return \ElementBucketLite\Autoload An instance of the class.
+	 * @return \ElementBucket\Autoload An instance of the class.
 	 */
 	public static function instance() {
 		if ( ! static::$instance ) {
@@ -105,7 +105,7 @@ class Autoload {
 				)
 			);
 
-			$file_path = CS_ELEMENT_BUCKET_LITE_PATH . str_replace( $base_namespace_path . DIRECTORY_SEPARATOR, '', $file_namespace_path ) . '.php';
+			$file_path = CS_ELEMENT_BUCKET_PATH . str_replace( $base_namespace_path . DIRECTORY_SEPARATOR, '', $file_namespace_path ) . '.php';
 
 			if ( file_exists( $file_path ) && is_readable( $file_path ) ) {
 				include $file_path;

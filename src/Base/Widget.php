@@ -3,17 +3,17 @@
  * Base Widget file
  *
  * @category   Base
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Base;
+namespace CodexShaper\ElementBucket\Base;
 
 use Elementor\Widget_Base;
-use CodexShaper\ElementBucketLite\Plugin;
+use CodexShaper\ElementBucket\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // exit if access directly.
@@ -23,10 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Base widget class for element bucket
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 abstract class Widget extends Widget_Base {

@@ -3,23 +3,23 @@
  * Helper functions file
  *
  * @category   Helper
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-use CodexShaper\ElementBucketLite\Plugin;
+use CodexShaper\ElementBucket\Plugin;
 
-if ( ! function_exists( 'get_cs_element_bucket_lite_plugin' ) ) {
+if ( ! function_exists( 'get_cs_element_bucket_plugin' ) ) {
 
 	/**
 	 * Get core plugin instance
 	 *
 	 * @return Plugin instance.
 	 */
-	function get_cs_element_bucket_lite_plugin() {
+	function get_cs_element_bucket_plugin() {
 		return Plugin::instance();
 	}
 }

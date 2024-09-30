@@ -3,26 +3,26 @@
  * Team Member Widget file
  *
  * @category   Widget
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Modules\TeamMember\Widgets;
+namespace CodexShaper\ElementBucket\Modules\TeamMember\Widgets;
 
-use CodexShaper\ElementBucketLite\Base\Widget;
+use CodexShaper\ElementBucket\Base\Widget;
 use Elementor\Controls_Manager;
 
 /**
  * Team Member widget class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class Team_Member extends Widget {
@@ -42,7 +42,7 @@ class Team_Member extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Team Member', 'cs-element-bucket-lite' );
+		return __( 'EB Team Member', 'element-bucket' );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Team_Member extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'cs-element-bucket-lite' );
+		return array( 'element-bucket' );
 	}
 
 	/**
@@ -97,18 +97,18 @@ class Team_Member extends Widget {
 		$this->start_controls_section(
 			'settings_section',
 			array(
-				'label' => __( 'General Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'General Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'style_select',
 			array(
-				'label'   => esc_html__( 'Select Style', 'cs-element-bucket-lite' ),
+				'label'   => esc_html__( 'Select Style', 'element-bucket' ),
 				'type'    => \Elementor\Controls_Manager::SELECT,
 				'options' => array(
-					'style-1' => esc_html__( 'Style-1', 'cs-element-bucket-lite' ),
-					'style-2' => esc_html__( 'Style-2', 'cs-element-bucket-lite' ),
+					'style-1' => esc_html__( 'Style-1', 'element-bucket' ),
+					'style-2' => esc_html__( 'Style-2', 'element-bucket' ),
 				),
 				'default' => 'style-1',
 			)
@@ -117,7 +117,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'profile',
 			array(
-				'label'   => __( 'profile Image', 'cs-element-bucket-lite' ),
+				'label'   => __( 'profile Image', 'element-bucket' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array(
 					'image' => array(
@@ -130,7 +130,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'member_name',
 			array(
-				'label'   => __( 'Memeber Name', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Memeber Name', 'element-bucket' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => ( '' ),
 			)
@@ -138,7 +138,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'designation',
 			array(
-				'label'   => __( 'Designation', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Designation', 'element-bucket' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => ( '' ),
 			)
@@ -146,7 +146,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'profile_link',
 			array(
-				'label'   => __( 'Profile Link', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Profile Link', 'element-bucket' ),
 				'type'    => Controls_Manager::URL,
 				'default' => array(
 					'url'         => '#',
@@ -157,10 +157,10 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'show_social_link',
 			array(
-				'label'        => esc_html__( 'Show Social Link', 'cs-element-bucket-lite' ),
+				'label'        => esc_html__( 'Show Social Link', 'element-bucket' ),
 				'type'         => \Elementor\Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Show', 'cs-element-bucket-lite' ),
-				'label_off'    => esc_html__( 'Hide', 'cs-element-bucket-lite' ),
+				'label_on'     => esc_html__( 'Show', 'element-bucket' ),
+				'label_off'    => esc_html__( 'Hide', 'element-bucket' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 				'condition'    => array(
@@ -171,7 +171,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'social_btn_icon',
 			array(
-				'label'     => esc_html__( 'Social Button Icon', 'cs-element-bucket-lite' ),
+				'label'     => esc_html__( 'Social Button Icon', 'element-bucket' ),
 				'type'      => Controls_Manager::ICONS,
 				'default'   => array(
 					'value'   => 'fas fa-share-alt-square',
@@ -187,7 +187,7 @@ class Team_Member extends Widget {
 		$reapeater->add_control(
 			'icon',
 			array(
-				'label'   => esc_html__( 'Icon', 'cs-element-bucket-lite' ),
+				'label'   => esc_html__( 'Icon', 'element-bucket' ),
 				'type'    => Controls_Manager::ICONS,
 				'default' => array(
 					'value'   => 'fas fa-circle',
@@ -198,7 +198,7 @@ class Team_Member extends Widget {
 		$reapeater->add_control(
 			'social_link',
 			array(
-				'label'   => __( 'Social Media Link', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Social Media Link', 'element-bucket' ),
 				'type'    => Controls_Manager::URL,
 				'default' =>
 				array(
@@ -210,7 +210,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'Social_icon',
 			array(
-				'label'  => __( 'Social Icon Item', 'cs-element-bucket-lite' ),
+				'label'  => __( 'Social Icon Item', 'element-bucket' ),
 				'type'   => Controls_Manager::REPEATER,
 				'fields' => $reapeater->get_controls(),
 			)
@@ -221,7 +221,7 @@ class Team_Member extends Widget {
 		$this->start_controls_section(
 			'styling_section_two',
 			array(
-				'label' => __( 'Name Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Name Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -231,13 +231,13 @@ class Team_Member extends Widget {
 		$this->start_controls_tab(
 			'style_normal_tab',
 			array(
-				'label' => esc_html__( 'Normal', 'cs-element-bucket-lite' ),
+				'label' => esc_html__( 'Normal', 'element-bucket' ),
 			)
 		);
 		$this->add_control(
 			'member_name_color',
 			array(
-				'label'     => __( 'Member Name Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Member Name Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -254,7 +254,7 @@ class Team_Member extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'      => 'member_name_typography',
-				'label'     => __( 'Member Name Typography', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Member Name Typography', 'element-bucket' ),
 				'selector'  => '{{WRAPPER}} .single-team-item .details .name',
 				'condition' => array(
 					'style_select' => 'style-1',
@@ -264,7 +264,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'member_name_one_color',
 			array(
-				'label'     => __( 'Member Name Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Member Name Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -281,7 +281,7 @@ class Team_Member extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'      => 'member_name_one_typography',
-				'label'     => __( 'Member Name Typography', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Member Name Typography', 'element-bucket' ),
 				'selector'  => '{{WRAPPER}} .single-team-member .name',
 				'condition' => array(
 					'style_select' => 'style-2',
@@ -293,13 +293,13 @@ class Team_Member extends Widget {
 		$this->start_controls_tab(
 			'style_hover_tab',
 			array(
-				'label' => esc_html__( 'Hover', 'cs-element-bucket-lite' ),
+				'label' => esc_html__( 'Hover', 'element-bucket' ),
 			)
 		);
 		$this->add_control(
 			'name_hover_color',
 			array(
-				'label'     => __( 'Name Hover Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Name Hover Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => ( '#F7C600' ),
 				'selectors' => array(
@@ -314,7 +314,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'name_hover_one_color',
 			array(
-				'label'     => __( 'Name Hover Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Name Hover Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => ( '#F7C600' ),
 				'selectors' => array(
@@ -333,7 +333,7 @@ class Team_Member extends Widget {
 		$this->start_controls_section(
 			'styling_section_three',
 			array(
-				'label' => __( 'Social Icon Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Social Icon Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -343,13 +343,13 @@ class Team_Member extends Widget {
 		$this->start_controls_tab(
 			'style_normal_tab_one',
 			array(
-				'label' => esc_html__( 'Normal', 'cs-element-bucket-lite' ),
+				'label' => esc_html__( 'Normal', 'element-bucket' ),
 			)
 		);
 		$this->add_control(
 			'Icon_width',
 			array(
-				'label'      => __( 'Icon Width', 'cs-element-bucket-lite' ),
+				'label'      => __( 'Icon Width', 'element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -364,7 +364,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'icon_height',
 			array(
-				'label'      => __( 'Icon Height', 'cs-element-bucket-lite' ),
+				'label'      => __( 'Icon Height', 'element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -389,7 +389,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'icon_border_radious',
 			array(
-				'label'      => __( 'Icon Border Radious', 'cs-element-bucket-lite' ),
+				'label'      => __( 'Icon Border Radious', 'element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -404,7 +404,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'bg_color',
 			array(
-				'label'     => __( 'Background Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Background Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -419,7 +419,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'Icon_width_style_2',
 			array(
-				'label'      => __( 'Icon Width', 'cs-element-bucket-lite' ),
+				'label'      => __( 'Icon Width', 'element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -434,7 +434,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'icon_height_style_2',
 			array(
-				'label'      => __( 'Icon Height', 'cs-element-bucket-lite' ),
+				'label'      => __( 'Icon Height', 'element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -459,7 +459,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'icon_border_radious_style_2',
 			array(
-				'label'      => __( 'Icon Border Radious', 'cs-element-bucket-lite' ),
+				'label'      => __( 'Icon Border Radious', 'element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'selectors'  => array(
@@ -474,7 +474,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'member_social_icon_style_2_color',
 			array(
-				'label'     => __( 'Social Icon Background Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Social Icon Background Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'condition' => array(
 					'style_select' => 'style-2',
@@ -490,13 +490,13 @@ class Team_Member extends Widget {
 		$this->start_controls_tab(
 			'style_hover_tab_one',
 			array(
-				'label' => esc_html__( 'Hover', 'cs-element-bucket-lite' ),
+				'label' => esc_html__( 'Hover', 'element-bucket' ),
 			)
 		);
 		$this->add_control(
 			'bg_color_hover',
 			array(
-				'label'     => __( 'Hover Background Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Hover Background Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -512,7 +512,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'member_social_icon_style_2_hover_color',
 			array(
-				'label'     => __( 'Background Hover Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Background Hover Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'condition' => array(
 					'style_select' => 'style-2',
@@ -530,14 +530,14 @@ class Team_Member extends Widget {
 		$this->start_controls_section(
 			'styling_section_four',
 			array(
-				'label' => __( 'Designation Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Designation Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'member_designation_color',
 			array(
-				'label'     => __( 'Member Designation Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Member Designation Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'condition' => array(
 					'style_select' => 'style-1',
@@ -552,7 +552,7 @@ class Team_Member extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'      => 'member_designation_typography',
-				'label'     => __( 'Member Designation Typography', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Member Designation Typography', 'element-bucket' ),
 				'selector'  => '{{WRAPPER}} .single-team-item .details .designation',
 				'condition' => array(
 					'style_select' => 'style-1',
@@ -562,7 +562,7 @@ class Team_Member extends Widget {
 		$this->add_control(
 			'member_designation_one_color',
 			array(
-				'label'     => __( 'Member Designation Color', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Member Designation Color', 'element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'condition' => array(
 					'style_select' => 'style-2',
@@ -577,7 +577,7 @@ class Team_Member extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'      => 'member_designation_one_typography',
-				'label'     => __( 'Member Designation Typography', 'cs-element-bucket-lite' ),
+				'label'     => __( 'Member Designation Typography', 'element-bucket' ),
 				'selector'  => '{{WRAPPER}} .single-team-member .designation',
 				'condition' => array(
 					'style_select' => 'style-2',
@@ -589,14 +589,14 @@ class Team_Member extends Widget {
 		$this->start_controls_section(
 			'styling_section_five',
 			array(
-				'label' => __( 'Card Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Card Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'card_padding',
 			array(
-				'label'      => esc_html__( 'Card Padding', 'cs-element-bucket-lite' ),
+				'label'      => esc_html__( 'Card Padding', 'element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(

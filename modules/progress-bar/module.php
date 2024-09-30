@@ -3,29 +3,29 @@
  * Module module file
  *
  * @category   Module
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Modules\ProgressBar;
+namespace CodexShaper\ElementBucket\Modules\ProgressBar;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-use CodexShaper\ElementBucketLite\Base\Module as BaseModule;
+use CodexShaper\ElementBucket\Base\Module as BaseModule;
 
 /**
  * Module module class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class Module extends BaseModule {
@@ -67,7 +67,7 @@ class Module extends BaseModule {
 			'eb-widget-progress-bar',
 			$this->get_css_assets_url( 'eb-widget-progress-bar', null, true, true ),
 			array(),
-			CS_ELEMENT_BUCKET_LITE_VERSION
+			CS_ELEMENT_BUCKET_VERSION
 		);
 	}
 }

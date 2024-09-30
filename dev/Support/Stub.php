@@ -3,14 +3,14 @@
  * Stub support file
  *
  * @category   Support
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Support;
+namespace CodexShaper\ElementBucket\Support;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit(); // exit if access directly.
@@ -20,10 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Stub Class for handling command template
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class Stub {

@@ -1,5 +1,5 @@
 {
-  "name": "codexshaper/cs-element-bucket-lite",
+  "name": "codexshaper/element-bucket",
   "description": "A premium widget bucket for elementor.",
   "type": "library",
   "license": "gpl-2.0",
@@ -8,10 +8,10 @@
     "wordpress",
     "plugin"
   ],
-  "homepage": "https://github.com/Codexshaper/cs-element-bucket-lite/",
+  "homepage": "https://github.com/Codexshaper/element-bucket/",
   "autoload": {
     "psr-4": {
-      "CodexShaper\\ElementBucketLite\\": [
+      "CodexShaper\\ElementBucket\\": [
         "src/",
         "dev/"
       ]

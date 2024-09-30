@@ -3,14 +3,14 @@
  * Base Module file
  *
  * @category   Base
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Base;
+namespace CodexShaper\ElementBucket\Base;
 
 use Elementor\Core\Base\Module as BaseModule;
 
@@ -22,10 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Base module class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 abstract class Module extends BaseModule {
@@ -56,7 +56,7 @@ abstract class Module extends BaseModule {
 	 * @return string
 	 */
 	public function get_assets_base_url(): string {
-		return CS_ELEMENT_BUCKET_LITE_URL;
+		return CS_ELEMENT_BUCKET_URL;
 	}
 
 	/**

@@ -3,17 +3,17 @@
  * Plugin file
  *
  * @category   Core
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite;
+namespace CodexShaper\ElementBucket;
 
-use CodexShaper\ElementBucketLite\Managers\ModuleManager;
-use CodexShaper\ElementBucketLite\Admin\Settings;
+use CodexShaper\ElementBucket\Managers\ModuleManager;
+use CodexShaper\ElementBucket\Admin\Settings;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -23,10 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Core Plugin Class for handling core features
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 final class Plugin {
@@ -54,7 +54,7 @@ final class Plugin {
 	 * @access private
 	 * @static
 	 *
-	 * @var \ElementBucketLite\Plugin The single instance of the class.
+	 * @var \ElementBucket\Plugin The single instance of the class.
 	 */
 	private static $instance = null;
 
@@ -63,7 +63,7 @@ final class Plugin {
 	 *
 	 * @since 1.0.0
 	 * @access private
-	 * @var \CodexShaper\ElementBucketLite\Manager\ModuleManager module manager.
+	 * @var \CodexShaper\ElementBucket\Manager\ModuleManager module manager.
 	 */
 	private $module_manager;
 
@@ -72,7 +72,7 @@ final class Plugin {
 	 *
 	 * @since 1.0.0
 	 * @access private
-	 * @var \CodexShaper\ElementBucketLite\Manager\ConsoleManager console manager.
+	 * @var \CodexShaper\ElementBucket\Manager\ConsoleManager console manager.
 	 */
 	private $console_manager;
 
@@ -85,7 +85,7 @@ final class Plugin {
 	 * @access public
 	 * @static
 	 *
-	 * @return \ElementBucketLite\Plugin An instance of the class.
+	 * @return \ElementBucket\Plugin An instance of the class.
 	 */
 	public static function instance() {
 
@@ -135,7 +135,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function load_text_domain() {
-		load_plugin_textdomain( 'cs-element-bucket-lite', false, CS_ELEMENT_BUCKET_LITE_PATH . '/languages/' );
+		load_plugin_textdomain( 'element-bucket', false, CS_ELEMENT_BUCKET_PATH . '/languages/' );
 	}
 
 	/**
@@ -152,7 +152,7 @@ final class Plugin {
 	 */
 	public function init() {
 		// Auto load element bucket classes.
-		require_once trailingslashit( CS_ELEMENT_BUCKET_LITE_PATH ) . 'autoload.php';
+		require_once trailingslashit( CS_ELEMENT_BUCKET_PATH ) . 'autoload.php';
 		Settings::instance();
 		// Register Widget Categories.
 		add_action( 'elementor/elements/categories_registered', array( $this, 'add_widget_categories' ) );
@@ -171,7 +171,7 @@ final class Plugin {
 	public function register_frontend_styles() {
 		wp_register_style(
 			'eb-swiper',
-			trailingslashit( CS_ELEMENT_BUCKET_LITE_URL ) . 'assets/vendor/swiper/bundle.min.css',
+			trailingslashit( CS_ELEMENT_BUCKET_URL ) . 'assets/vendor/swiper/bundle.min.css',
 			array(),
 			'11.1.4',
 			'all'
@@ -189,9 +189,9 @@ final class Plugin {
 	public function enqueue_styles() {
 		wp_enqueue_style(
 			'eb-frontend',
-			trailingslashit( CS_ELEMENT_BUCKET_LITE_URL ) . 'assets/css/eb-frontend.css',
+			trailingslashit( CS_ELEMENT_BUCKET_URL ) . 'assets/css/eb-frontend.css',
 			array(),
-			CS_ELEMENT_BUCKET_LITE_VERSION,
+			CS_ELEMENT_BUCKET_VERSION,
 			'all'
 		);
 	}
@@ -207,7 +207,7 @@ final class Plugin {
 	public function register_frontend_scripts() {
 		wp_register_script(
 			'eb-swiper',
-			trailingslashit( CS_ELEMENT_BUCKET_LITE_URL ) . 'assets/vendor/swiper/bundle.min.js',
+			trailingslashit( CS_ELEMENT_BUCKET_URL ) . 'assets/vendor/swiper/bundle.min.js',
 			array( 'jquery' ),
 			'11.1.4',
 			true
@@ -215,9 +215,9 @@ final class Plugin {
 
 		wp_register_script(
 			'eb-accordion',
-			trailingslashit( CS_ELEMENT_BUCKET_LITE_URL ) . 'assets/js/eb-accordion.js',
+			trailingslashit( CS_ELEMENT_BUCKET_URL ) . 'assets/js/eb-accordion.js',
 			array(),
-			CS_ELEMENT_BUCKET_LITE_VERSION,
+			CS_ELEMENT_BUCKET_VERSION,
 			true
 		);
 	}
@@ -233,9 +233,9 @@ final class Plugin {
 	public function enqueue_frontend_scripts() {
 		wp_register_script(
 			'eb-frontend',
-			trailingslashit( CS_ELEMENT_BUCKET_LITE_URL ) . 'assets/js/eb-frontend.js',
+			trailingslashit( CS_ELEMENT_BUCKET_URL ) . 'assets/js/eb-frontend.js',
 			array( 'jquery', 'elementor-frontend' ),
-			CS_ELEMENT_BUCKET_LITE_VERSION,
+			CS_ELEMENT_BUCKET_VERSION,
 			true
 		);
 
@@ -253,9 +253,9 @@ final class Plugin {
 	public function admin_enqueue() {
 		wp_register_style(
 			'eb-admin-css',
-			trailingslashit( CS_ELEMENT_BUCKET_LITE_URL ) . 'assets/css/eb-admin.css',
+			trailingslashit( CS_ELEMENT_BUCKET_URL ) . 'assets/css/eb-admin.css',
 			array(),
-			CS_ELEMENT_BUCKET_LITE_VERSION,
+			CS_ELEMENT_BUCKET_VERSION,
 			'all',
 		);
 
@@ -263,7 +263,7 @@ final class Plugin {
 			'eb-google-fonts',
 			add_query_arg( 'family', rawurlencode( 'Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap' ), '//fonts.googleapis.com/css' ),
 			array(),
-			CS_ELEMENT_BUCKET_LITE_VERSION,
+			CS_ELEMENT_BUCKET_VERSION,
 			'all',
 		);
 
@@ -283,9 +283,9 @@ final class Plugin {
 	 */
 	public function add_widget_categories( $elements_manager ) {
 		$elements_manager->add_category(
-			'cs-element-bucket-lite',
+			'element-bucket',
 			array(
-				'title' => esc_html__( 'Element Bucket', 'cs-element-bucket-lite' ),
+				'title' => esc_html__( 'Element Bucket', 'element-bucket' ),
 				'icon'  => 'fa fa-plug',
 			)
 		);
@@ -333,11 +333,11 @@ final class Plugin {
 	 */
 	public function admin_notice_missing_elementor_activation() {
 
-		$btn['text'] = esc_html__( 'Install Elementor', 'cs-element-bucket-lite' );
+		$btn['text'] = esc_html__( 'Install Elementor', 'element-bucket' );
 		$btn['url']  = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
 
 		if ( file_exists( WP_PLUGIN_DIR . '/elementor/elementor.php' ) ) {
-			$btn['text'] = esc_html__( 'Activate Elementor', 'cs-element-bucket-lite' );
+			$btn['text'] = esc_html__( 'Activate Elementor', 'element-bucket' );
 			$btn['url']  = wp_nonce_url( 'plugins.php?action=activate&plugin=elementor/elementor.php&plugin_status=all&paged=1', 'activate-plugin_elementor/elementor.php' );
 		}
 
@@ -345,9 +345,9 @@ final class Plugin {
 			'<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>',
 			sprintf(
 				/* translators: 1: Plugin name 2: Elementor */
-				esc_html__( '"%1$s" requires "%2$s" to be installed and activated. Click here to %3$s', 'cs-element-bucket-lite' ),
-				'<strong>' . esc_html__( 'Element Bucket', 'cs-element-bucket-lite' ) . '</strong>',
-				'<strong>' . esc_html__( 'Elementor', 'cs-element-bucket-lite' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" to be installed and activated. Click here to %3$s', 'element-bucket' ),
+				'<strong>' . esc_html__( 'Element Bucket', 'element-bucket' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', 'element-bucket' ) . '</strong>',
 				'<a href="' . esc_url( $btn['url'] ) . '" class="button button-primary">' . esc_html( $btn['text'] ) . '</a>'
 			)
 		);
@@ -367,9 +367,9 @@ final class Plugin {
 			'<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>',
 			sprintf(
 				/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'cs-element-bucket-lite' ),
-				'<strong>' . esc_html__( 'Elementor Bucket', 'cs-element-bucket-lite' ) . '</strong>',
-				'<strong>' . esc_html__( 'Elementor', 'cs-element-bucket-lite' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'element-bucket' ),
+				'<strong>' . esc_html__( 'Elementor Bucket', 'element-bucket' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', 'element-bucket' ) . '</strong>',
 				esc_html( self::MINIMUM_ELEMENTOR_VERSION )
 			)
 		);
@@ -389,9 +389,9 @@ final class Plugin {
 			'<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>',
 			sprintf(
 				/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'cs-element-bucket-lite' ),
-				'<strong>' . esc_html__( 'Elementor Bucket', 'cs-element-bucket-lite' ) . '</strong>',
-				'<strong>' . esc_html__( 'PHP', 'cs-element-bucket-lite' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'element-bucket' ),
+				'<strong>' . esc_html__( 'Elementor Bucket', 'element-bucket' ) . '</strong>',
+				'<strong>' . esc_html__( 'PHP', 'element-bucket' ) . '</strong>',
 				esc_html( self::MINIMUM_PHP_VERSION )
 			)
 		);
@@ -407,7 +407,7 @@ final class Plugin {
 	 * @return string
 	 */
 	public static function get_categories() {
-		return array( 'cs-element-bucket-lite' );
+		return array( 'element-bucket' );
 	}
 
 	/**
@@ -422,6 +422,6 @@ final class Plugin {
 	 * @return string
 	 */
 	public static function asset_url( $path = '' ) {
-		return trailingslashit( CS_ELEMENT_BUCKET_LITE_URL ) . 'assets/' . $path;
+		return trailingslashit( CS_ELEMENT_BUCKET_URL ) . 'assets/' . $path;
 	}
 }

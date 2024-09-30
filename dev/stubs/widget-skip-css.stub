@@ -3,16 +3,16 @@
  * $CLASS$ Widget file
  *
  * @category   Widget
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
 namespace $NAMESPACE$;
 
-use CodexShaper\ElementBucketLite\Base\Widget;
+use CodexShaper\ElementBucket\Base\Widget;
 use Elementor\Controls_Manager;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -23,10 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * $CLASS$ widget class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class $CLASS$ extends Widget
@@ -49,7 +49,7 @@ class $CLASS$ extends Widget
      */
     public function get_title()
     {
-        return __('EB $TITLE$', 'cs-element-bucket-lite');
+        return __('EB $TITLE$', 'element-bucket');
     }
 
     /**
@@ -90,12 +90,12 @@ class $CLASS$ extends Widget
         $this->start_controls_section(
             'settings_section',
             [
-                'label' => __('General Settings', 'cs-element-bucket-lite'),
+                'label' => __('General Settings', 'element-bucket'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
         $this->add_control('section-title', [
-            'label' => __('Section Title', 'cs-element-bucket-lite'),
+            'label' => __('Section Title', 'element-bucket'),
             'type' =>  Controls_Manager::TEXT,
         ]);
         $this->end_controls_section();
@@ -104,7 +104,7 @@ class $CLASS$ extends Widget
         $this->start_controls_section(
             'styling_section',
             [
-                'label' => __('Styling Settings', 'cs-element-bucket-lite'),
+                'label' => __('Styling Settings', 'element-bucket'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );

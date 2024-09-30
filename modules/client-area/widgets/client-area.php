@@ -3,26 +3,26 @@
  * Client Area Widget file
  *
  * @category   Widget
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 
-namespace CodexShaper\ElementBucketLite\Modules\ClientArea\Widgets;
+namespace CodexShaper\ElementBucket\Modules\ClientArea\Widgets;
 
-use CodexShaper\ElementBucketLite\Base\Widget;
+use CodexShaper\ElementBucket\Base\Widget;
 use Elementor\Controls_Manager;
 
 /**
  * Client Area widget class
  *
  * @category   Class
- * @package    ElementBucketLite
+ * @package    ElementBucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
- * @link       https://elementbucket.com
+ * @link       https://github.com/codexshaper/element-bucket
  * @since      1.0.0
  */
 class Client_Area extends Widget {
@@ -42,7 +42,7 @@ class Client_Area extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Client Area', 'cs-element-bucket-lite' );
+		return __( 'EB Client Area', 'element-bucket' );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Client_Area extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'cs-element-bucket-lite' );
+		return array( 'element-bucket' );
 	}
 
 	/**
@@ -97,7 +97,7 @@ class Client_Area extends Widget {
 		$this->start_controls_section(
 			'settings_section',
 			array(
-				'label' => __( 'General Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'General Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -105,11 +105,11 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'sliding_control',
 			array(
-				'label'   => __( 'Sliding Style Control', 'cs-element-bucket-lite' ),
+				'label'   => __( 'Sliding Style Control', 'element-bucket' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'style_01' => __( 'Style 01', 'cs-element-bucket-lite' ),
-					'style_02' => __( 'Style 02', 'cs-element-bucket-lite' ),
+					'style_01' => __( 'Style 01', 'element-bucket' ),
+					'style_02' => __( 'Style 02', 'element-bucket' ),
 				),
 				'default' => 'style_01',
 			)
@@ -119,9 +119,9 @@ class Client_Area extends Widget {
 		$repeater->add_control(
 			'image',
 			array(
-				'label'       => __( 'Image', 'cs-element-bucket-lite' ),
+				'label'       => __( 'Image', 'element-bucket' ),
 				'type'        => Controls_Manager::MEDIA,
-				'description' => __( 'Upload image', 'cs-element-bucket-lite' ),
+				'description' => __( 'Upload image', 'element-bucket' ),
 
 			)
 		);
@@ -129,7 +129,7 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'items',
 			array(
-				'label'       => __( 'Items', 'cs-element-bucket-lite' ),
+				'label'       => __( 'Items', 'element-bucket' ),
 				'type'        => Controls_Manager::REPEATER,
 				'fields'      => $repeater->get_controls(),
 				'default'     => array(
@@ -146,10 +146,10 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'button_control',
 			array(
-				'label'        => __( 'Slider Button On Off', 'cs-element-bucket-lite' ),
+				'label'        => __( 'Slider Button On Off', 'element-bucket' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', 'cs-element-bucket-lite' ),
-				'label_off'    => __( 'No', 'cs-element-bucket-lite' ),
+				'label_on'     => __( 'Yes', 'element-bucket' ),
+				'label_off'    => __( 'No', 'element-bucket' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -158,9 +158,9 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'next_slider',
 			array(
-				'label'       => __( 'Next Icon', 'cs-element-bucket-lite' ),
+				'label'       => __( 'Next Icon', 'element-bucket' ),
 				'type'        => Controls_Manager::MEDIA,
-				'description' => __( 'Upload Image', 'cs-element-bucket-lite' ),
+				'description' => __( 'Upload Image', 'element-bucket' ),
 				'condition'   => array(
 					'button_control' => 'yes',
 				),
@@ -169,9 +169,9 @@ class Client_Area extends Widget {
 		$this->add_control(
 			'prev_slider',
 			array(
-				'label'       => __( 'Previous Icon', 'cs-element-bucket-lite' ),
+				'label'       => __( 'Previous Icon', 'element-bucket' ),
 				'type'        => Controls_Manager::MEDIA,
-				'description' => __( 'Upload Image', 'cs-element-bucket-lite' ),
+				'description' => __( 'Upload Image', 'element-bucket' ),
 				'condition'   => array(
 					'button_control' => 'yes',
 				),
@@ -184,7 +184,7 @@ class Client_Area extends Widget {
 		$this->start_controls_section(
 			'styling_section',
 			array(
-				'label' => __( 'Styling Settings', 'cs-element-bucket-lite' ),
+				'label' => __( 'Styling Settings', 'element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);

@@ -2,26 +2,26 @@
 /**
  * Module for Team Member functionality.
  *
- * This file defines the Team Member module, which is a part of the ElementBucketLite plugin.
+ * This file defines the Team Member module, which is a part of the ElementBucket plugin.
  * It registers styles and provides metadata about the module.
  *
- * @package ElementBucketLite\Modules\TeamMember
+ * @package ElementBucket\Modules\TeamMember
  */
 
-namespace CodexShaper\ElementBucketLite\Modules\TeamMember;
+namespace CodexShaper\ElementBucket\Modules\TeamMember;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-use CodexShaper\ElementBucketLite\Base\Module as BaseModule;
+use CodexShaper\ElementBucket\Base\Module as BaseModule;
 
 /**
  * Class Module
  *
  * Handles the Team Member module functionality, including registering styles and defining widget information.
  *
- * @package ElementBucketLite\Modules\TeamMember
+ * @package ElementBucket\Modules\TeamMember
  * @since 1.0.0
  */
 class Module extends BaseModule {
@@ -63,7 +63,7 @@ class Module extends BaseModule {
 			'eb-widget-team-member',
 			$this->get_css_assets_url( 'eb-widget-team-member', null, true, true ),
 			array(),
-			CS_ELEMENT_BUCKET_LITE_VERSION
+			CS_ELEMENT_BUCKET_VERSION
 		);
 	}
 }

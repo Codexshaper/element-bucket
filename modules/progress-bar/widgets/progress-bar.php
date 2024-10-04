@@ -46,7 +46,7 @@ class Progress_Bar extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Progress Bar', 'element-bucket' );
+		return __( 'EB Progress Bar', 'cs-element-bucket' );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Progress_Bar extends Widget {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return array( 'Progress Bar', 'CodexShaper', 'Element Bucket' );
+		return array( 'Progress Bar', 'CodexShaper', 'CS Element Bucket' );
 	}
 
 	/**
@@ -78,7 +78,7 @@ class Progress_Bar extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'element-bucket' );
+		return array( 'cs-element-bucket' );
 	}
 
 	/**
@@ -108,20 +108,20 @@ class Progress_Bar extends Widget {
 		$this->start_controls_section(
 			'settings_section',
 			array(
-				'label' => __( 'General Settings', 'element-bucket' ),
+				'label' => __( 'General Settings', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'progress_bar_type',
 			array(
-				'label'   => esc_html__( 'Type', 'element-bucket' ),
+				'label'   => esc_html__( 'Type', 'cs-element-bucket' ),
 				'type'    => \Elementor\Controls_Manager::SELECT,
 				'default' => 'solid',
 				'options' => array(
-					'progress-bar-eb-animated'         => esc_html__( 'Default', 'element-bucket' ),
-					'progress-bar-gradient'            => esc_html__( 'Gradient', 'element-bucket' ),
-					'progress-bar-eb-rainbow-animated' => esc_html__( 'Rainbow', 'element-bucket' ),
+					'progress-bar-eb-animated'         => esc_html__( 'Default', 'cs-element-bucket' ),
+					'progress-bar-gradient'            => esc_html__( 'Gradient', 'cs-element-bucket' ),
+					'progress-bar-eb-rainbow-animated' => esc_html__( 'Rainbow', 'cs-element-bucket' ),
 				),
 
 			)
@@ -129,16 +129,16 @@ class Progress_Bar extends Widget {
 		$this->add_control(
 			'progress_title',
 			array(
-				'label'       => esc_html__( 'Title', 'element-bucket' ),
+				'label'       => esc_html__( 'Title', 'cs-element-bucket' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => esc_html__( 'Web Design', 'element-bucket' ),
-				'placeholder' => esc_html__( 'Type your title here', 'element-bucket' ),
+				'default'     => esc_html__( 'Web Design', 'cs-element-bucket' ),
+				'placeholder' => esc_html__( 'Type your title here', 'cs-element-bucket' ),
 			)
 		);
 		$this->add_control(
 			'progress_percentage',
 			array(
-				'label'   => esc_html__( 'Percentage', 'element-bucket' ),
+				'label'   => esc_html__( 'Percentage', 'cs-element-bucket' ),
 				'type'    => \Elementor\Controls_Manager::NUMBER,
 				'default' => 70,
 			)
@@ -149,14 +149,14 @@ class Progress_Bar extends Widget {
 		$this->start_controls_section(
 			'styling_section',
 			array(
-				'label' => __( 'Styling Settings', 'element-bucket' ),
+				'label' => __( 'Styling Settings', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'title_color',
 			array(
-				'label'     => __( 'Title Color', 'element-bucket' ),
+				'label'     => __( 'Title Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .progress-title' => 'color: {{VALUE}}',
@@ -169,14 +169,14 @@ class Progress_Bar extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'title_typography',
-				'label'    => __( 'Title Typography', 'element-bucket' ),
+				'label'    => __( 'Title Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .progress-title',
 			)
 		);
 		$this->add_control(
 			'number_color',
 			array(
-				'label'     => __( 'Number Color', 'element-bucket' ),
+				'label'     => __( 'Number Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .progress-percentage' => 'color: {{VALUE}}',
@@ -189,7 +189,7 @@ class Progress_Bar extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'number_typography',
-				'label'    => __( 'Number Typography', 'element-bucket' ),
+				'label'    => __( 'Number Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .progress-percentage',
 			)
 		);
@@ -197,7 +197,7 @@ class Progress_Bar extends Widget {
 		$this->add_control(
 			'progress_bar_height',
 			array(
-				'label'      => esc_html__( 'Progress Bar Height', 'element-bucket' ),
+				'label'      => esc_html__( 'Progress Bar Height', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -222,7 +222,7 @@ class Progress_Bar extends Widget {
 		$this->add_control(
 			'bar_padding',
 			array(
-				'label'      => esc_html__( 'Progress Bar Padding', 'element-bucket' ),
+				'label'      => esc_html__( 'Progress Bar Padding', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -237,7 +237,7 @@ class Progress_Bar extends Widget {
 		$this->add_control(
 			'default_bar_color',
 			array(
-				'label'     => __( 'Background Color', 'element-bucket' ),
+				'label'     => __( 'Background Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .progress-bar-eb-animated' => 'background-color: {{VALUE}}',
@@ -262,7 +262,7 @@ class Progress_Bar extends Widget {
 		$this->add_control(
 			'rainbow_gradient',
 			array(
-				'label'     => __( 'Rainbow Gradient', 'element-bucket' ),
+				'label'     => __( 'Rainbow Gradient', 'cs-element-bucket' ),
 				'type'      => \Elementor\Controls_Manager::TEXTAREA,
 				'default'   => 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red)',
 				'selectors' => array(

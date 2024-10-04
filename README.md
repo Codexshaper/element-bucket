@@ -1,3 +1,3 @@
-# element-bucket
+# cs-element-bucket
 
 A bucket for Elementor Widgets

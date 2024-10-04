@@ -68,15 +68,6 @@ final class Plugin {
 	private $module_manager;
 
 	/**
-	 * Console Manager
-	 *
-	 * @since 1.0.0
-	 * @access private
-	 * @var \CodexShaper\ElementBucket\Manager\ConsoleManager console manager.
-	 */
-	private $console_manager;
-
-	/**
 	 * Instance
 	 *
 	 * Ensures only one instance of the class is loaded or can be loaded.
@@ -135,7 +126,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function load_text_domain() {
-		load_plugin_textdomain( 'element-bucket', false, CS_ELEMENT_BUCKET_PATH . '/languages/' );
+		load_plugin_textdomain( 'cs-element-bucket', false, CS_ELEMENT_BUCKET_PATH . '/languages/' );
 	}
 
 	/**
@@ -283,9 +274,9 @@ final class Plugin {
 	 */
 	public function add_widget_categories( $elements_manager ) {
 		$elements_manager->add_category(
-			'element-bucket',
+			'cs-element-bucket',
 			array(
-				'title' => esc_html__( 'Element Bucket', 'element-bucket' ),
+				'title' => esc_html__( 'CS Element Bucket', 'cs-element-bucket' ),
 				'icon'  => 'fa fa-plug',
 			)
 		);
@@ -333,11 +324,11 @@ final class Plugin {
 	 */
 	public function admin_notice_missing_elementor_activation() {
 
-		$btn['text'] = esc_html__( 'Install Elementor', 'element-bucket' );
+		$btn['text'] = esc_html__( 'Install Elementor', 'cs-element-bucket' );
 		$btn['url']  = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=elementor' ), 'install-plugin_elementor' );
 
 		if ( file_exists( WP_PLUGIN_DIR . '/elementor/elementor.php' ) ) {
-			$btn['text'] = esc_html__( 'Activate Elementor', 'element-bucket' );
+			$btn['text'] = esc_html__( 'Activate Elementor', 'cs-element-bucket' );
 			$btn['url']  = wp_nonce_url( 'plugins.php?action=activate&plugin=elementor/elementor.php&plugin_status=all&paged=1', 'activate-plugin_elementor/elementor.php' );
 		}
 
@@ -345,9 +336,9 @@ final class Plugin {
 			'<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>',
 			sprintf(
 				/* translators: 1: Plugin name 2: Elementor */
-				esc_html__( '"%1$s" requires "%2$s" to be installed and activated. Click here to %3$s', 'element-bucket' ),
-				'<strong>' . esc_html__( 'Element Bucket', 'element-bucket' ) . '</strong>',
-				'<strong>' . esc_html__( 'Elementor', 'element-bucket' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" to be installed and activated. Click here to %3$s', 'cs-element-bucket' ),
+				'<strong>' . esc_html__( 'CS Element Bucket', 'cs-element-bucket' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', 'cs-element-bucket' ) . '</strong>',
 				'<a href="' . esc_url( $btn['url'] ) . '" class="button button-primary">' . esc_html( $btn['text'] ) . '</a>'
 			)
 		);
@@ -367,9 +358,9 @@ final class Plugin {
 			'<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>',
 			sprintf(
 				/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'element-bucket' ),
-				'<strong>' . esc_html__( 'Elementor Bucket', 'element-bucket' ) . '</strong>',
-				'<strong>' . esc_html__( 'Elementor', 'element-bucket' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'cs-element-bucket' ),
+				'<strong>' . esc_html__( 'CS Element Bucket', 'cs-element-bucket' ) . '</strong>',
+				'<strong>' . esc_html__( 'Elementor', 'cs-element-bucket' ) . '</strong>',
 				esc_html( self::MINIMUM_ELEMENTOR_VERSION )
 			)
 		);
@@ -389,9 +380,9 @@ final class Plugin {
 			'<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>',
 			sprintf(
 				/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'element-bucket' ),
-				'<strong>' . esc_html__( 'Elementor Bucket', 'element-bucket' ) . '</strong>',
-				'<strong>' . esc_html__( 'PHP', 'element-bucket' ) . '</strong>',
+				esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'cs-element-bucket' ),
+				'<strong>' . esc_html__( 'CS Element Bucket', 'cs-element-bucket' ) . '</strong>',
+				'<strong>' . esc_html__( 'PHP', 'cs-element-bucket' ) . '</strong>',
 				esc_html( self::MINIMUM_PHP_VERSION )
 			)
 		);
@@ -407,7 +398,7 @@ final class Plugin {
 	 * @return string
 	 */
 	public static function get_categories() {
-		return array( 'element-bucket' );
+		return array( 'cs-element-bucket' );
 	}
 
 	/**

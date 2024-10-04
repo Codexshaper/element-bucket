@@ -12,19 +12,19 @@
 
 use CodexShaper\ElementBucket\Plugin;
 
-if ( ! function_exists( 'get_cs_element_bucket_plugin' ) ) {
+if ( ! function_exists( 'cseb_get_plugin' ) ) {
 
 	/**
 	 * Get core plugin instance
 	 *
 	 * @return Plugin instance.
 	 */
-	function get_cs_element_bucket_plugin() {
+	function cseb_get_plugin() {
 		return Plugin::instance();
 	}
 }
 
-if ( ! function_exists( 'get_eb_asset' ) ) {
+if ( ! function_exists( 'cseb_get_asset' ) ) {
 
 	/**
 	 * Get core plugin instance
@@ -33,19 +33,19 @@ if ( ! function_exists( 'get_eb_asset' ) ) {
 	 *
 	 * @return string The asset url.
 	 */
-	function get_eb_asset( $path ) {
+	function cseb_get_asset( $path ) {
 		return Plugin::asset_url( $path );
 	}
 }
 
-if ( ! function_exists( 'get_eb_svg_rules' ) ) {
+if ( ! function_exists( 'cseb_get_svg_rules' ) ) {
 
 	/**
 	 * Get svg rules
 	 *
 	 * @return array The svg rules.
 	 */
-	function get_eb_svg_rules() {
+	function cseb_get_svg_rules() {
 
 		return array_merge(
 			// Default option.

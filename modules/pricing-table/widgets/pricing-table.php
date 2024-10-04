@@ -3,7 +3,7 @@
  * Pricing Table Widget file
  *
  * @category   Widget
- * @package    element-bucket
+ * @package    cs-element-bucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
  * @link       https://github.com/codexshaper/element-bucket
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Pricing Table widget class
  *
  * @category   Class
- * @package    element-bucket
+ * @package    cs-element-bucket
  * @author     CodexShaper <info@codexshaper.com>
  * @license    https://www.gnu.org/licenses/gpl-2.0.html
  * @link       https://github.com/codexshaper/element-bucket
@@ -50,7 +50,7 @@ class Pricing_Table extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Pricing Table', 'element-bucket' );
+		return __( 'EB Pricing Table', 'cs-element-bucket' );
 	}
 
 	/**
@@ -73,7 +73,7 @@ class Pricing_Table extends Widget {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return array( 'Pricing Table', 'CodexShaper', 'Element Bucket' );
+		return array( 'Pricing Table', 'CodexShaper', 'CS Element Bucket' );
 	}
 
 	/**
@@ -82,7 +82,7 @@ class Pricing_Table extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'element-bucket' );
+		return array( 'cs-element-bucket' );
 	}
 
 	/**
@@ -112,62 +112,62 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'general_settings',
 			array(
-				'label' => __( 'General Settings', 'element-bucket' ),
+				'label' => __( 'General Settings', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'active_duration',
 			array(
-				'label'   => esc_html__( 'Active Duration', 'element-bucket' ),
+				'label'   => esc_html__( 'Active Duration', 'cs-element-bucket' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'solid',
 				'options' => array(
-					'yearly'  => esc_html__( 'Yearly', 'element-bucket' ),
-					'monthly' => esc_html__( 'Monthly', 'element-bucket' ),
+					'yearly'  => esc_html__( 'Yearly', 'cs-element-bucket' ),
+					'monthly' => esc_html__( 'Monthly', 'cs-element-bucket' ),
 				),
 			)
 		);
 		$this->add_control(
 			'plan_type',
 			array(
-				'label'       => __( 'Plan Type', 'element-bucket' ),
+				'label'       => __( 'Plan Type', 'cs-element-bucket' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => esc_html__( 'Regular Plan', 'element-bucket' ),
+				'default'     => esc_html__( 'Regular Plan', 'cs-element-bucket' ),
 				'label_block' => true,
 			)
 		);
 		$this->add_control(
 			'curency_sign',
 			array(
-				'label'       => __( 'Curency Sign', 'element-bucket' ),
+				'label'       => __( 'Curency Sign', 'cs-element-bucket' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => esc_html__( '$', 'element-bucket' ),
+				'default'     => esc_html__( '$', 'cs-element-bucket' ),
 				'label_block' => true,
 			)
 		);
 		$this->add_control(
 			'price',
 			array(
-				'label'       => esc_html__( 'Price', 'element-bucket' ),
+				'label'       => esc_html__( 'Price', 'cs-element-bucket' ),
 				'type'        => Controls_Manager::NUMBER,
-				'default'     => esc_html__( '09.96', 'element-bucket' ),
+				'default'     => esc_html__( '09.96', 'cs-element-bucket' ),
 				'label_block' => true,
 			)
 		);
 		$this->add_control(
 			'duration',
 			array(
-				'label'       => esc_html__( 'Duration', 'element-bucket' ),
+				'label'       => esc_html__( 'Duration', 'cs-element-bucket' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => esc_html__( 'Monthly', 'element-bucket' ),
+				'default'     => esc_html__( 'Monthly', 'cs-element-bucket' ),
 				'label_block' => true,
 			)
 		);
 		$this->add_control(
 			'btn_icon',
 			array(
-				'label'   => esc_html__( 'Button Icon', 'element-bucket' ),
+				'label'   => esc_html__( 'Button Icon', 'cs-element-bucket' ),
 				'type'    => Controls_Manager::ICONS,
 				'default' => array(),
 
@@ -176,7 +176,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'btn_icon_width',
 			array(
-				'label'      => esc_html__( 'Button Icon Width', 'element-bucket' ),
+				'label'      => esc_html__( 'Button Icon Width', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -202,16 +202,16 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'btn_title',
 			array(
-				'label'   => __( 'Button Title', 'element-bucket' ),
+				'label'   => __( 'Button Title', 'cs-element-bucket' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'Choose this Package', 'element-bucket' ),
+				'default' => esc_html__( 'Choose this Package', 'cs-element-bucket' ),
 
 			)
 		);
 		$this->add_control(
 			'btn_link',
 			array(
-				'label'   => __( 'Button Link', 'element-bucket' ),
+				'label'   => __( 'Button Link', 'cs-element-bucket' ),
 				'type'    => Controls_Manager::URL,
 				'default' => array(
 					'url' => '#',
@@ -223,18 +223,18 @@ class Pricing_Table extends Widget {
 		$repeater_two->add_control(
 			'price_section_name',
 			array(
-				'label'       => __( 'Price Section Name', 'element-bucket' ),
+				'label'       => __( 'Price Section Name', 'cs-element-bucket' ),
 				'type'        => Controls_Manager::TEXT,
 				'default'     => '',
 				'label_block' => true,
-				'placeholder' => __( 'Enter price section name ', 'element-bucket' ),
+				'placeholder' => __( 'Enter price section name ', 'cs-element-bucket' ),
 				'description' => ( 'Enter exactly same price section name where you want to add feature' ),
 			)
 		);
 		$repeater_two->add_control(
 			'feature_icon',
 			array(
-				'label'   => esc_html__( 'Icon', 'element-bucket' ),
+				'label'   => esc_html__( 'Icon', 'cs-element-bucket' ),
 				'type'    => Controls_Manager::ICONS,
 				'default' => array(),
 
@@ -243,7 +243,7 @@ class Pricing_Table extends Widget {
 		$repeater_two->add_control(
 			'feature_icon_width',
 			array(
-				'label'      => esc_html__( 'Icon Width', 'element-bucket' ),
+				'label'      => esc_html__( 'Icon Width', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -268,15 +268,15 @@ class Pricing_Table extends Widget {
 		$repeater_two->add_control(
 			'title',
 			array(
-				'label'   => __( 'Title', 'element-bucket' ),
+				'label'   => __( 'Title', 'cs-element-bucket' ),
 				'type'    => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( '12 Hours Access', 'element-bucket' ),
+				'default' => esc_html__( '12 Hours Access', 'cs-element-bucket' ),
 			)
 		);
 		$this->add_control(
 			'features',
 			array(
-				'label'  => __( 'Features', 'element-bucket' ),
+				'label'  => __( 'Features', 'cs-element-bucket' ),
 				'type'   => Controls_Manager::REPEATER,
 				'fields' => $repeater_two->get_controls(),
 			)
@@ -286,14 +286,14 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'styling_pricing_card',
 			array(
-				'label' => __( 'Pricing Card Styling', 'element-bucket' ),
+				'label' => __( 'Pricing Card Styling', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'pricing_card_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Card Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Pricing Card Margin', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -308,7 +308,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricin_card_padding',
 			array(
-				'label'      => esc_html__( 'Pricing Card Padding', 'element-bucket' ),
+				'label'      => esc_html__( 'Pricing Card Padding', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -330,7 +330,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'eb_border_width',
 			array(
-				'label'      => esc_html__( 'Border Width', 'element-bucket' ),
+				'label'      => esc_html__( 'Border Width', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -355,7 +355,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'content_gap',
 			array(
-				'label'      => esc_html__( 'Content Gap', 'element-bucket' ),
+				'label'      => esc_html__( 'Content Gap', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -381,7 +381,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_duration_active_color',
 			array(
-				'label'     => __( 'Active Duration Color', 'element-bucket' ),
+				'label'     => __( 'Active Duration Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -393,7 +393,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_heading_color',
 			array(
-				'label'     => __( 'Pricing Heading Color', 'element-bucket' ),
+				'label'     => __( 'Pricing Heading Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -406,14 +406,14 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_heading_typography',
-				'label'    => __( 'Pricing Heading Typography', 'element-bucket' ),
+				'label'    => __( 'Pricing Heading Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .single-pricing .pricing-plan-duration',
 			)
 		);
 		$this->add_control(
 			'pricing_heading_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Heading Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Pricing Heading Margin', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -428,7 +428,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_title_color',
 			array(
-				'label'     => __( 'Pricing Title Color', 'element-bucket' ),
+				'label'     => __( 'Pricing Title Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -441,14 +441,14 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_title_typography',
-				'label'    => __( 'Pricing Title Typography', 'element-bucket' ),
+				'label'    => __( 'Pricing Title Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .single-pricing .pricing-plan',
 			)
 		);
 		$this->add_control(
 			'pricing_title_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Title Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Pricing Title Margin', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -465,14 +465,14 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'pricing_feature',
 			array(
-				'label' => __( 'Pricing Feature', 'element-bucket' ),
+				'label' => __( 'Pricing Feature', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'pricing_feature_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Feature Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Pricing Feature Margin', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -487,7 +487,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_features_color',
 			array(
-				'label'     => __( 'Pricing Features Color', 'element-bucket' ),
+				'label'     => __( 'Pricing Features Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -500,7 +500,7 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_features_typography',
-				'label'    => __( 'Pricing Features Typography', 'element-bucket' ),
+				'label'    => __( 'Pricing Features Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .single-pricing .pricing-plan-item',
 			)
 		);
@@ -509,14 +509,14 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'pricing',
 			array(
-				'label' => __( 'Pricing', 'element-bucket' ),
+				'label' => __( 'Pricing', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'pricing_margin',
 			array(
-				'label'      => esc_html__( 'Pricing Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Pricing Margin', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -531,7 +531,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_price_color',
 			array(
-				'label'     => __( 'Pricing Price Color', 'element-bucket' ),
+				'label'     => __( 'Pricing Price Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -544,7 +544,7 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_price_typography',
-				'label'    => __( 'Pricing Price Typography', 'element-bucket' ),
+				'label'    => __( 'Pricing Price Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .single-pricing .plan-price',
 			)
 		);
@@ -553,14 +553,14 @@ class Pricing_Table extends Widget {
 		$this->start_controls_section(
 			'pricing_btn',
 			array(
-				'label' => __( 'Button', 'element-bucket' ),
+				'label' => __( 'Button', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'btn_margin',
 			array(
-				'label'      => esc_html__( 'Button Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Button Margin', 'cs-element-bucket' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -575,7 +575,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_btn_color',
 			array(
-				'label'     => __( 'Pricing Button Color', 'element-bucket' ),
+				'label'     => __( 'Pricing Button Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -587,7 +587,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_btn_hover_color',
 			array(
-				'label'     => __( 'Pricing Button Hover Color', 'element-bucket' ),
+				'label'     => __( 'Pricing Button Hover Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -599,7 +599,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_btn_title_color',
 			array(
-				'label'     => __( 'Pricing Button Title Color', 'element-bucket' ),
+				'label'     => __( 'Pricing Button Title Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -611,7 +611,7 @@ class Pricing_Table extends Widget {
 		$this->add_control(
 			'pricing_btn_hover_title_color',
 			array(
-				'label'     => __( 'Pricing Button Hover Title Color', 'element-bucket' ),
+				'label'     => __( 'Pricing Button Hover Title Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 
 				'selectors' => array(
@@ -624,7 +624,7 @@ class Pricing_Table extends Widget {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'pricing_btn_title_typography',
-				'label'    => __( 'Pricing Button Title Typography', 'element-bucket' ),
+				'label'    => __( 'Pricing Button Title Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .rory-btn-primary',
 			)
 		);
@@ -685,7 +685,7 @@ class Pricing_Table extends Widget {
 			<ul>
 				<?php foreach ( $settings['features'] as $feature ) : ?>
 					<li class='pricing-plan-item'>
-						<?php echo wp_kses( $price_features, get_eb_svg_rules() ) . esc_html( $feature['title'] ); ?>
+						<?php echo wp_kses( $price_features, cseb_get_svg_rules() ) . esc_html( $feature['title'] ); ?>
 					</li>
 				<?php endforeach; ?>
 			</ul>
@@ -700,7 +700,7 @@ class Pricing_Table extends Widget {
 					<?php
 					if ( $btn_icon ) :
 						?>
-						<i class="btn-icon"><?php echo wp_kses( $btn_icon, get_eb_svg_rules() ); ?> <?php endif; ?> </i> <?php echo esc_html( $settings['btn_title'] ); ?>
+						<i class="btn-icon"><?php echo wp_kses( $btn_icon, cseb_get_svg_rules() ); ?> <?php endif; ?> </i> <?php echo esc_html( $settings['btn_title'] ); ?>
 
 				</a>
 			</div>

@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:      CodexShaper Element Bucket Addons for Elementor
+ * Plugin Name:       Advanced Element Bucket Addons for Elementor
  * Plugin URI:        https://github.com/codexshaper/element-bucket/
- * Description:       A premium widget bucket for elementor.
+ * Description:       A premium elements bucket for elementor.
  * Version:           1.0.0
  * Requires at least: 5.2
  * Requires PHP:      7.4
@@ -10,7 +10,7 @@
  * Author URI:        https://codexshaper.com/
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       element-bucket
+ * Text Domain:       cs-element-bucket
  * Domain Path:       /languages
  *
  * @package ElementBucket
@@ -44,7 +44,7 @@ define( 'CS_ELEMENT_BUCKET_WIDGET_PREFIX', 'eb-widget' );
  *
  * @return void
  */
-function load_cs_element_bucket_plugin() {
+function cseb_load_plugin() {
 
 	require_once trailingslashit( CS_ELEMENT_BUCKET_PATH ) . 'vendor/autoload.php';
 	require_once trailingslashit( CS_ELEMENT_BUCKET_PATH ) . 'inc/helpers.php';
@@ -58,4 +58,4 @@ function load_cs_element_bucket_plugin() {
 	}
 }
 
-add_action( 'plugins_loaded', 'load_cs_element_bucket_plugin' );
+add_action( 'plugins_loaded', 'cseb_load_plugin' );

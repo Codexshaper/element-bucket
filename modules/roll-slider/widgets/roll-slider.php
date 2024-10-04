@@ -46,7 +46,7 @@ class Roll_Slider extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Roll Slider', 'element-bucket' );
+		return __( 'EB Roll Slider', 'cs-element-bucket' );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Roll_Slider extends Widget {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return array( 'Roll Slider', 'CodexShaper', 'Element Bucket' );
+		return array( 'Roll Slider', 'CodexShaper', 'CS Element Bucket' );
 	}
 
 	/**
@@ -78,7 +78,7 @@ class Roll_Slider extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'element-bucket' );
+		return array( 'cs-element-bucket' );
 	}
 
 	/**
@@ -122,7 +122,7 @@ class Roll_Slider extends Widget {
 		$this->start_controls_section(
 			'settings_section',
 			array(
-				'label' => __( 'General Settings', 'element-bucket' ),
+				'label' => __( 'General Settings', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
@@ -130,10 +130,10 @@ class Roll_Slider extends Widget {
 		$repeater->add_control(
 			'title_button',
 			array(
-				'label'        => __( 'Title Section On Off', 'element-bucket' ),
+				'label'        => __( 'Title Section On Off', 'cs-element-bucket' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', 'element-bucket' ),
-				'label_off'    => __( 'No', 'element-bucket' ),
+				'label_on'     => __( 'Yes', 'cs-element-bucket' ),
+				'label_off'    => __( 'No', 'cs-element-bucket' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -141,9 +141,9 @@ class Roll_Slider extends Widget {
 		$repeater->add_control(
 			'title',
 			array(
-				'label'     => __( 'Slider Title', 'element-bucket' ),
+				'label'     => __( 'Slider Title', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::TEXTAREA,
-				'default'   => __( 'Element Bucket by CodeXshaper LLC', 'element-bucket' ),
+				'default'   => __( 'CS Element Bucket by CodeXshaper LLC', 'cs-element-bucket' ),
 				'condition' => array(
 					'title_button' => 'yes',
 				),
@@ -153,10 +153,10 @@ class Roll_Slider extends Widget {
 		$repeater->add_control(
 			'icon_image_button',
 			array(
-				'label'        => __( 'Icon Image Hide Unhide', 'element-bucket' ),
+				'label'        => __( 'Icon Image Hide Unhide', 'cs-element-bucket' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => __( 'Yes', 'element-bucket' ),
-				'label_off'    => __( 'No', 'element-bucket' ),
+				'label_on'     => __( 'Yes', 'cs-element-bucket' ),
+				'label_off'    => __( 'No', 'cs-element-bucket' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			)
@@ -165,10 +165,10 @@ class Roll_Slider extends Widget {
 		$repeater->add_control(
 			'icon_img',
 			array(
-				'label'       => __( 'Icon Image', 'element-bucket' ),
+				'label'       => __( 'Icon Image', 'cs-element-bucket' ),
 				'type'        => Controls_Manager::MEDIA,
 				'show_label'  => false,
-				'description' => __( 'Icon image', 'element-bucket' ),
+				'description' => __( 'Icon image', 'cs-element-bucket' ),
 				'default'     => array(
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				),
@@ -180,7 +180,7 @@ class Roll_Slider extends Widget {
 		$this->add_control(
 			'items',
 			array(
-				'label'   => __( 'Roll Slider Items', 'element-bucket' ),
+				'label'   => __( 'Roll Slider Items', 'cs-element-bucket' ),
 				'type'    => Controls_Manager::REPEATER,
 				'fields'  => $repeater->get_controls(),
 				'default' => array(
@@ -195,11 +195,11 @@ class Roll_Slider extends Widget {
 		$this->add_control(
 			'slider_control',
 			array(
-				'label'   => __( 'Sliding Position Control', 'element-bucket' ),
+				'label'   => __( 'Sliding Position Control', 'cs-element-bucket' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'left_to_right' => __( 'Left to Right', 'element-bucket' ),
-					'right_to_left' => __( 'Right to Left', 'element-bucket' ),
+					'left_to_right' => __( 'Left to Right', 'cs-element-bucket' ),
+					'right_to_left' => __( 'Right to Left', 'cs-element-bucket' ),
 				),
 				'default' => 'left_to_right',
 			)
@@ -211,7 +211,7 @@ class Roll_Slider extends Widget {
 		$this->start_controls_section(
 			'styling_section',
 			array(
-				'label' => __( 'Styling Settings', 'element-bucket' ),
+				'label' => __( 'Styling Settings', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -219,14 +219,14 @@ class Roll_Slider extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'title_typography',
-				'label'    => __( 'Title Typography', 'element-bucket' ),
+				'label'    => __( 'Title Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .title',
 			)
 		);
 		$this->add_control(
 			'title_color',
 			array(
-				'label'     => __( 'Title Color', 'element-bucket' ),
+				'label'     => __( 'Title Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .title' => 'color: {{VALUE}}',
@@ -237,14 +237,14 @@ class Roll_Slider extends Widget {
 			'title_show_hr',
 			array(
 				'type'  => Controls_Manager::DIVIDER,
-				'label' => __( 'title show hr', 'element-bucket' ),
+				'label' => __( 'title show hr', 'cs-element-bucket' ),
 			)
 		);
 		$this->end_controls_section();
 		$this->start_controls_section(
 			'rollslider_background_color',
 			array(
-				'label' => __( 'rollslider Background Color', 'element-bucket' ),
+				'label' => __( 'rollslider Background Color', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -254,7 +254,7 @@ class Roll_Slider extends Widget {
 		$this->start_controls_tab(
 			'rollslider_bg_normal_tab',
 			array(
-				'label' => __( 'Normal', 'element-bucket' ),
+				'label' => __( 'Normal', 'cs-element-bucket' ),
 			)
 		);
 		$this->add_group_control(
@@ -270,7 +270,7 @@ class Roll_Slider extends Widget {
 		$this->start_controls_tab(
 			'rollslider_bg_hover_tab',
 			array(
-				'label' => __( 'Hover', 'element-bucket' ),
+				'label' => __( 'Hover', 'cs-element-bucket' ),
 			)
 		);
 		$this->add_group_control(

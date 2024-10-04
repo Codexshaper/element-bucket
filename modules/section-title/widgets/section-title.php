@@ -42,7 +42,7 @@ class Section_Title extends Widget {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'EB Section Title', 'element-bucket' );
+		return __( 'EB Section Title', 'cs-element-bucket' );
 	}
 
 	/**
@@ -51,7 +51,7 @@ class Section_Title extends Widget {
 	 * @return array Widget title.
 	 */
 	public function get_keywords() {
-		return array( 'Section Title', 'CodexShaper', 'Element Bucket' );
+		return array( 'Section Title', 'CodexShaper', 'CS Element Bucket' );
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Section_Title extends Widget {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return array( 'element-bucket' );
+		return array( 'cs-element-bucket' );
 	}
 
 	/**
@@ -97,14 +97,14 @@ class Section_Title extends Widget {
 		$this->start_controls_section(
 			'settings_section',
 			array(
-				'label' => __( 'General Settings', 'element-bucket' ),
+				'label' => __( 'General Settings', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
 			)
 		);
 		$this->add_control(
 			'sub_title_icon',
 			array(
-				'label'   => esc_html__( 'Sub Title Icon', 'element-bucket' ),
+				'label'   => esc_html__( 'Sub Title Icon', 'cs-element-bucket' ),
 				'type'    => \Elementor\Controls_Manager::ICONS,
 				'default' => array(
 					'value'   => 'fas fa-circle',
@@ -116,7 +116,7 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'sub_title_icon_width',
 			array(
-				'label'      => esc_html__( 'Sub Title Icon Width', 'element-bucket' ),
+				'label'      => esc_html__( 'Sub Title Icon Width', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'range'      => array(
@@ -141,21 +141,21 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'sub-title',
 			array(
-				'label' => __( 'Sub Title', 'element-bucket' ),
+				'label' => __( 'Sub Title', 'cs-element-bucket' ),
 				'type'  => Controls_Manager::TEXT,
 			)
 		);
 		$this->add_control(
 			'section-title',
 			array(
-				'label' => __( 'Section Title', 'element-bucket' ),
+				'label' => __( 'Section Title', 'cs-element-bucket' ),
 				'type'  => Controls_Manager::TEXT,
 			)
 		);
 		$this->add_control(
 			'section_description',
 			array(
-				'label' => __( 'Section Description', 'element-bucket' ),
+				'label' => __( 'Section Description', 'cs-element-bucket' ),
 				'type'  => Controls_Manager::TEXT,
 			)
 		);
@@ -165,14 +165,14 @@ class Section_Title extends Widget {
 		$this->start_controls_section(
 			'sub_title',
 			array(
-				'label' => __( 'Sub Title', 'element-bucket' ),
+				'label' => __( 'Sub Title', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'sub_title_color',
 			array(
-				'label'     => __( 'Sub Title Color', 'element-bucket' ),
+				'label'     => __( 'Sub Title Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .sub-title' => 'color: {{VALUE}}',
@@ -184,14 +184,14 @@ class Section_Title extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'sub_title_typography',
-				'label'    => __( 'Sub Title Typography', 'element-bucket' ),
+				'label'    => __( 'Sub Title Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .sub-title',
 			)
 		);
 		$this->add_control(
 			'sub_title_margin',
 			array(
-				'label'      => esc_html__( 'Sub Title Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Sub Title Margin', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -210,7 +210,7 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'sub_title_padding',
 			array(
-				'label'      => esc_html__( 'Sub Title Padding', 'element-bucket' ),
+				'label'      => esc_html__( 'Sub Title Padding', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -229,19 +229,19 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'sub_title_justify_content',
 			array(
-				'label'     => esc_html__( 'Alignment', 'element-bucket' ),
+				'label'     => esc_html__( 'Alignment', 'cs-element-bucket' ),
 				'type'      => \Elementor\Controls_Manager::CHOOSE,
 				'options'   => array(
 					'left'   => array(
-						'title' => esc_html__( 'Left', 'element-bucket' ),
+						'title' => esc_html__( 'Left', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'element-bucket' ),
+						'title' => esc_html__( 'Center', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-center',
 					),
 					'right'  => array(
-						'title' => esc_html__( 'Right', 'element-bucket' ),
+						'title' => esc_html__( 'Right', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-right',
 					),
 				),
@@ -255,7 +255,7 @@ class Section_Title extends Widget {
 		$this->start_controls_section(
 			'section_title',
 			array(
-				'label' => __( 'Section Title', 'element-bucket' ),
+				'label' => __( 'Section Title', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
@@ -263,7 +263,7 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'section _title_color',
 			array(
-				'label'     => __( 'Section Title Color', 'element-bucket' ),
+				'label'     => __( 'Section Title Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .section-title' => 'color: {{VALUE}}',
@@ -276,14 +276,14 @@ class Section_Title extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'section_title_typography',
-				'label'    => __( 'Section Title Typography', 'element-bucket' ),
+				'label'    => __( 'Section Title Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .section-title',
 			)
 		);
 		$this->add_control(
 			'section_title_margin',
 			array(
-				'label'      => esc_html__( 'Section Title Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Section Title Margin', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -302,7 +302,7 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'section_title_padding',
 			array(
-				'label'      => esc_html__( 'Section Title Padding', 'element-bucket' ),
+				'label'      => esc_html__( 'Section Title Padding', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -321,19 +321,19 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'section_title_text_align',
 			array(
-				'label'     => esc_html__( 'Alignment', 'element-bucket' ),
+				'label'     => esc_html__( 'Alignment', 'cs-element-bucket' ),
 				'type'      => \Elementor\Controls_Manager::CHOOSE,
 				'options'   => array(
 					'left'   => array(
-						'title' => esc_html__( 'Left', 'element-bucket' ),
+						'title' => esc_html__( 'Left', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'element-bucket' ),
+						'title' => esc_html__( 'Center', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-center',
 					),
 					'right'  => array(
-						'title' => esc_html__( 'Right', 'element-bucket' ),
+						'title' => esc_html__( 'Right', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-right',
 					),
 				),
@@ -347,14 +347,14 @@ class Section_Title extends Widget {
 		$this->start_controls_section(
 			'description_title',
 			array(
-				'label' => __( 'Description Title', 'element-bucket' ),
+				'label' => __( 'Description Title', 'cs-element-bucket' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			)
 		);
 		$this->add_control(
 			'section_description_color',
 			array(
-				'label'     => __( 'Section Description  Color', 'element-bucket' ),
+				'label'     => __( 'Section Description  Color', 'cs-element-bucket' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .description' => 'color: {{VALUE}}',
@@ -367,14 +367,14 @@ class Section_Title extends Widget {
 			\Elementor\Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'section_description_typography',
-				'label'    => __( 'Section Description Typography', 'element-bucket' ),
+				'label'    => __( 'Section Description Typography', 'cs-element-bucket' ),
 				'selector' => '{{WRAPPER}} .description',
 			)
 		);
 		$this->add_control(
 			'description_margin',
 			array(
-				'label'      => esc_html__( 'Description Title Margin', 'element-bucket' ),
+				'label'      => esc_html__( 'Description Title Margin', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -393,7 +393,7 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'description_padding',
 			array(
-				'label'      => esc_html__( 'Description Padding', 'element-bucket' ),
+				'label'      => esc_html__( 'Description Padding', 'cs-element-bucket' ),
 				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em', 'rem', 'custom' ),
 				'default'    => array(
@@ -412,19 +412,19 @@ class Section_Title extends Widget {
 		$this->add_control(
 			'description_text_align',
 			array(
-				'label'     => esc_html__( 'Alignment', 'element-bucket' ),
+				'label'     => esc_html__( 'Alignment', 'cs-element-bucket' ),
 				'type'      => \Elementor\Controls_Manager::CHOOSE,
 				'options'   => array(
 					'left'   => array(
-						'title' => esc_html__( 'Left', 'element-bucket' ),
+						'title' => esc_html__( 'Left', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'element-bucket' ),
+						'title' => esc_html__( 'Center', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-center',
 					),
 					'right'  => array(
-						'title' => esc_html__( 'Right', 'element-bucket' ),
+						'title' => esc_html__( 'Right', 'cs-element-bucket' ),
 						'icon'  => 'eicon-text-align-right',
 					),
 				),
@@ -458,11 +458,11 @@ class Section_Title extends Widget {
 					'width'       => '100%',
 				)
 			);
-			$icon_tag = '<i>' . wp_kses( $icon, get_eb_svg_rules() ) . '</i>';
+			$icon_tag = '<i>' . wp_kses( $icon, cseb_get_svg_rules() ) . '</i>';
 		}
 
 		?>
-		<?php echo "<div class='section-heading'>  <span class='subtitle'> " . wp_kses( $icon_tag, get_eb_svg_rules() ) . " <p class='sub-title'>" . esc_html( $settings['sub-title'] ) . "</p> </span>  <h2 class='section-title'>" . esc_html( $settings['section-title'] ) . "</h2> <p class='description'>" . esc_html( $settings['section_description'] ) . '</p> </div>'; ?>
+		<?php echo "<div class='section-heading'>  <span class='subtitle'> " . wp_kses( $icon_tag, cseb_get_svg_rules() ) . " <p class='sub-title'>" . esc_html( $settings['sub-title'] ) . "</p> </span>  <h2 class='section-title'>" . esc_html( $settings['section-title'] ) . "</h2> <p class='description'>" . esc_html( $settings['section_description'] ) . '</p> </div>'; ?>
 		<?php
 	}
 }

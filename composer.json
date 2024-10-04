@@ -1,6 +1,6 @@
 {
   "name": "codexshaper/element-bucket",
-  "description": "A premium widget bucket for elementor.",
+  "description": "A premium elements bucket for elementor.",
   "type": "library",
   "license": "gpl-2.0",
   "version": "1.0.0",
@@ -21,6 +21,10 @@
     {
       "name": "Md Abu Ahsan Basir",
       "email": "maab.career@gmil.com"
+    },
+    {
+      "name": "CodexShaper",
+      "email": "codexshaper@gmil.com"
     }
   ],
   "require": {
